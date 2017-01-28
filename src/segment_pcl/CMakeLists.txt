@@ -36,7 +36,7 @@ include_directories(
 #add_executable(pcl_seg_node src/pcl_seg_node.cpp)
 #target_link_libraries(pcl_seg_node ${catkin_LIBRARIES})
 
-add_executable(subscribe_pc_node src/subscribe_pc_node.cpp)
-target_link_libraries(subscribe_pc_node ${catkin_LIBRARIES})
+add_executable(subscribe_pc_node_test src/subscribe_pc_node.cpp)
+target_link_libraries(subscribe_pc_node_test ${catkin_LIBRARIES})
 
 

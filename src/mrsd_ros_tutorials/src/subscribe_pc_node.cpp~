@@ -1,0 +1,111 @@
+
+
+#include <ros/ros.h>
+#include <image_transport/image_transport.h>
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/image_encodings.h>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+//pcl
+#include <pcl/io/io.h>
+#include <pcl/io/pcd_io.h>
+#include <pcl_conversions/pcl_conversions.h>
+#include <pcl_ros/point_cloud.h>
+#include <sensor_msgs/PointCloud2.h>
+#include <opencv2/opencv.hpp>
+#include <cv_bridge/cv_bridge.h>
+
+/** @brief Handles image pub/sub and painting circles (demo of a in-source class)
+*/
+class ImageConverter
+{
+  ros::NodeHandle nh;
+  image_transport::ImageTransport it_;
+//subscriber to rgb img and point cloud
+  image_transport::Subscriber kinect_img_sub;
+  image_transport::Subscriber kinect_pc_sub;
+
+//create pointer to rgb image and point cloud
+
+  cv_bridge::CvImagePtr kinect_color_raw;
+  pcl::PointCloud<pcl::PointXYZRGB>::Ptr kinect_color_pc;
+
+//PCD writer
+  pcl::PCDWriter writer;
+
+public:
+  int i = 0;
+
+  ImageConverter()
+    : it_(nh)
+  {
+    
+    kinect_img_sub = it_.subscribe("/kinect2/hd/image_color", 1, &ImageConverter::imageCb, this);
+    kinect_pc_sub =  nh.subscribe("/kinect2/hd/points", 1, &ImageConverter::kinectPointCloudCB, this);
+    kinect_color_pc = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
+  }
+
+  ~ImageConverter()
+  {
+    ;
+  }
+ 
+  void imageCb(const sensor_msgs::ImageConstPtr& msg)
+  {
+
+ 
+    try
+    {
+
+      kinect_color_raw = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+    }
+    catch (cv_bridge::Exception& e)
+    {
+      ROS_ERROR("cv_bridge exception: %s", e.what());
+      return;
+    }
+
+
+
+    do_really_cool_stuff(kinect_color_raw);
+
+     
+  }
+
+  void kinectPointCloudCB(const sensor_msgs::PointCloud2ConstPtr& cloud_msg){
+     pcl::fromROSMsg(*cloud_msg, *kinectColorPC);
+     ROS_INFO("[Perception] Get Kinect Point Cloud Data");
+  }
+
+
+     
+  void do_really_cool_stuff(cv_bridge::CvImagePtr kinect_color_raw)
+  {
+
+    i=i+1;
+
+//save images
+
+    std::string name = std::to_string(i); 
+    name = "hard"+ name + ".jpg";
+    cv::imwrite(name, kinect_color_raw->image);
+    std::cout<<i<<std::endl;
+
+  }
+};
+
+int main(int argc, char** argv)
+{
+  ros::init(argc, argv, "image_converter");
+  ImageConverter ic;
+  
+  while(ros::ok())
+    {
+        ros::Duration(10).sleep();
+        ros::spinOnce();
+    }
+    
+  
+  return 0;
+}

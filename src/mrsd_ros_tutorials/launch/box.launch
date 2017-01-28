@@ -1,0 +1,5 @@
+<launch>
+
+<node pkg="mrsd_ros_tutorials" type="display_box_marker" name="display_box_marker" output="screen"/>
+<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" output="screen"/>
+</launch>

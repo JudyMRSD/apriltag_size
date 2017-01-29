@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   pcl_conversions
   pcl_ros
+  message_generation
 )
 
 find_package(PCL 1.7 REQUIRED)
@@ -28,6 +29,17 @@ generate_dynamic_reconfigure_options(
 include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+)
+
+add_service_files(
+   FILES
+   SaveData.srv
+   
+ )
+ 
+generate_messages(
+  DEPENDENCIES
+  std_msgs
 )
 ################
 #### Build #####
@@ -52,4 +64,10 @@ add_dependencies(display_box_marker ${PROJECT_NAME}_gencfg)
 
 add_executable(pointcloud_transform_node src/pointcloud_transform_node.cpp)
 target_link_libraries(pointcloud_transform_node ${catkin_LIBRARIES})
+#newly added to work with apriltags
+add_executable(subscribe_pc_node src/subscribe_pc_node.cpp)
+target_link_libraries(subscribe_pc_node ${catkin_LIBRARIES})
+
+
+
 

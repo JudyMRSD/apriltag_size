@@ -17,6 +17,8 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   pcl_conversions
   pcl_ros
+#service
+  message_generation
 )
 
 find_package(PCL 1.7 REQUIRED)
@@ -28,6 +30,17 @@ generate_dynamic_reconfigure_options(
 include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+)
+#service
+add_service_files(
+   FILES
+   SaveData.srv
+   
+ )
+#service
+generate_messages(
+  DEPENDENCIES
+  std_msgs
 )
 ################
 #### Build #####

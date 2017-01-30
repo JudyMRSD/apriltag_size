@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   pcl_conversions
   pcl_ros
+#service
   message_generation
 )
 
@@ -30,13 +31,13 @@ include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
-
+#service
 add_service_files(
    FILES
    SaveData.srv
    
  )
- 
+#service
 generate_messages(
   DEPENDENCIES
   std_msgs

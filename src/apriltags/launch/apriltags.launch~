@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <launch>        
   <!-- 
        Start an apriltag node using the default settings
@@ -6,8 +7,8 @@
   <node pkg="apriltags" type="apriltags" name="apriltags" output="screen">
     <param name="~default_tag_size" value="0.120" />
 
-    <param name="~viewer" value="true" />
-    <param name="~publish_detections_image" value="true" />
+    <param name="~viewer" value="false" />
+    <param name="~publish_detections_image" value="false" />
 
     <param name="~display_type" value="CUBE" />
     <param name="~marker_thickness" value="0.02" />

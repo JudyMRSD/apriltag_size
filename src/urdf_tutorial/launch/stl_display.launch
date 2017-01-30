@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+
+<launch>
+
+  <!-- point cloud and apriltag -->
+  
+  <include file="$(find apriltags)/launch/apriltags_view.launch"/>
+
+  <node pkg="apriltags" type="apriltag_kinect_tf" name="apriltag_kinect_tf"/>
+
+  <!--display stl in rviz scene -->
+  <include file="$(find urdf_tutorial)/launch/display.launch"/>
+
+
+  <!-- Set the world frame the same as the robot frame, send transform every 100ms  -->
+
+
+    <node pkg="tf" type="static_transform_publisher" name="world_eq_binSTL" args="0 0 0 0 0 0 1 world base_link 100" />
+
+</launch>
+

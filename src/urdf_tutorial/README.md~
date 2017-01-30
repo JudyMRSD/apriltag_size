@@ -8,26 +8,6 @@ roslaunch kinect2_bridge kinect2_bridge.launch
 roslaunch urdf_tutorial stl_display.launch
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -----------------------------------------------------------
 Old README.md 

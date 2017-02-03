@@ -82,3 +82,6 @@ target_link_libraries(apriltag_kinect_tf ${catkin_LIBRARIES}
                                 ${apriltagscpp_LIBRARY})
 add_dependencies(apriltag_kinect_tf ${PROJECT_NAME}_gencp)
 
+add_executable(frame_tf_broadcaster src/frame_tf_broadcaster.cpp)
+target_link_libraries(frame_tf_broadcaster ${catkin_LIBRARIES})
+

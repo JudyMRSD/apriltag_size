@@ -62,17 +62,33 @@ void chatterCallback(const apriltags::AprilTagDetections::ConstPtr& msg)
   //cout<<msg->detections[0].pose.position.x;
 
 //update tf
-  cout<<msg->detections.size();
-  static tf::TransformBroadcaster br;
-  tf::Transform tf_kinect_bin;
-  tf_kinect_bin.setOrigin(tf::Vector3(msg->detections[0].pose.position.x,msg->detections[0].pose.position.y,msg->detections[0].pose.position.z));
-  tf_kinect_bin.setRotation(tf::Quaternion(msg->detections[0].pose.orientation.x,msg->detections[0].pose.orientation.y,msg->detections[0].pose.orientation.z,msg->detections[0].pose.orientation.w));
 
+  
+  static tf::TransformBroadcaster br;
+  static tf::TransformBroadcaster br2;
+  tf::Transform tf_kinect_bin;
+  tf::Transform tf_apriltag;
+
+  if (msg->detections.size() > 0)
+	{
+  	tf_kinect_bin.setOrigin(tf::Vector3(msg->detections[0].pose.position.x,msg->detections[0].pose.position.y,msg->detections[0].pose.position.z));
+	  tf_kinect_bin.setRotation(tf::Quaternion(msg->detections[0].pose.orientation.x,msg->detections[0].pose.orientation.y,msg->detections[0].pose.orientation.z,msg->detections[0].pose.orientation.w));
+
+    //tf_apriltag.setOrigin(tf::Vector3(msg->detections[0].pose.position.x,msg->detections[0].pose.position.y,msg->detections[0].pose.position.z));
+    //tf_apriltag.setRotation(tf::Quaternion(msg->detections[0].pose.orientation.x,msg->detections[0].pose.orientation.y,msg->detections[0].pose.orientation.z,msg->detections[0].pose.orientation.w));
+ 	tf_apriltag.setOrigin( tf::Vector3(0.0, 0.0, 0.0) );
+    tf_apriltag.setRotation( tf::Quaternion(0, 0, 0, 1) );
+	
  //tf_kinect_bin.setOrigin( tf::Vector3(0.0, 2.0, 0.0) );
  //tf_kinect_bin.setRotation( tf::Quaternion(0, 0, 0, 1) );
 //send tf to rviz
-  br.sendTransform(tf::StampedTransform(tf_kinect_bin, ros::Time::now(), "world","kinect2_rgb_optical_frame"));
+  
+  br2.sendTransform(tf::StampedTransform(tf_apriltag, ros::Time::now(), "kinect2_rgb_optical_frame","apriltag_frame"));
+  br.sendTransform(tf::StampedTransform(tf_kinect_bin, ros::Time::now(), "kinect2_rgb_optical_frame","world"));
 
+ // br.sendTransform(tf::StampedTransform(tf_kinect_bin, ros::Time::now(), "kinect2_rgb_optical_frame","base_link"));
+ //   br.sendTransform(tf::StampedTransform(tf_kinect_bin, ros::Time::now(), "base_link","kinect2_rgb_optical_frame"));
+	}																														
 }
 
 int main(int argc, char **argv)

@@ -16,7 +16,7 @@
   <!-- Set the world frame the same as the robot frame, send transform every 100ms  -->
 
 
-    <node pkg="tf" type="static_transform_publisher" name="world_eq_binSTL" args="0 0 0 0 0 0 1 world base_link 100" />
+   <node pkg="tf" type="static_transform_publisher" name="world_eq_binSTL" args="0 0 0 0 0 0 1 world base_link 100" />
 
 </launch>
 

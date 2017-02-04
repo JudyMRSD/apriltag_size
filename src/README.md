@@ -6,4 +6,9 @@ need to catkin_make common_ws (contains iai_kinect2) before run the following
  
 roslaunch kinect2_bridge kinect2_bridge.launch
 roslaunch urdf_tutorial stl_display.launch
+------------------------------
+------------------------------
+ros msg file for point cloud 
+https://github.com/cheyenlu/plaid_apc/tree/master/plaid_msgs/msg
 
+pass pointer? pass through filter

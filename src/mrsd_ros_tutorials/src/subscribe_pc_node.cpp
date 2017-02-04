@@ -34,12 +34,15 @@ class ImageConverter
 
   cv_bridge::CvImagePtr kinect_color_raw;
   pcl::PointCloud<pcl::PointXYZRGB>::Ptr kinect_color_pc;
+  sensor_msgs::PointCloud2 ros_pc;
 
 //PCD writer
   pcl::PCDWriter writer;
 
 //the service is created and advertised over ROS
   ros::ServiceServer service;
+
+
 public:
 
   ImageConverter()
@@ -69,8 +72,18 @@ public:
      ROS_INFO("[Perception] Get Kinect Point Cloud Data");
   }
 
+/*
+  pcl::PointCloud<pcl::PointXYZ> conversion(const sensor_msgs::PointCloud2 input)
+{
+  pcl::PCLPointCloud2 pcl_pc;
+  pcl_conversions::toPCL(input, pcl_pc);
 
-     
+  pcl::PointCloud<pcl::PointXYZ> cloud;
+
+  pcl::fromPCLPointCloud2(pcl_pc, cloud);
+  return cloud;
+}
+*/
   //void saveDataCB(cv_bridge::CvImagePtr kinect_color_raw)
   bool saveDataCB(mrsd_ros_tutorials::SaveData::Request &req, 
     mrsd_ros_tutorials::SaveData::Response &res )
@@ -79,6 +92,7 @@ public:
     SaveData.srv:
     string item_number
     ---
+    sensor_msgs/PointCloud2 point_cloud
     uint64 status
     */  
 
@@ -99,6 +113,10 @@ public:
     ROS_INFO("[Perception] Save PCD file ");
 
     res.status = 1;
+    //convert from pcl xyz to sensor_msgs
+    pcl::toROSMsg(*kinect_color_pc, ros_pc);
+    res.point_cloud = ros_pc;
+
     return true;
 
   }

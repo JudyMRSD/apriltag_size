@@ -19,6 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_ros
 #service
   message_generation
+  sensor_msgs
 )
 
 find_package(PCL 1.7 REQUIRED)
@@ -41,6 +42,7 @@ add_service_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  sensor_msgs
 )
 ################
 #### Build #####

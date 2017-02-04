@@ -109,6 +109,7 @@ public:
 
     std::string pc_name;
     pc_name = "hard_pc"+ pc_name +".pcd";
+    std::cout <<"service address"<< kinect_color_pc<< std::endl;
     writer.writeBinary(pc_name, *kinect_color_pc);
     ROS_INFO("[Perception] Save PCD file ");
 
@@ -130,7 +131,7 @@ int main(int argc, char** argv)
  
   while(ros::ok())
     {
-        ros::Duration(10).sleep();
+        ros::Duration(1).sleep();
         ros::spinOnce();
    //     ic.saveDataCB("1");
     }

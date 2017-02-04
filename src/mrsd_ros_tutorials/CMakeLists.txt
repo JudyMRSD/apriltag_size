@@ -72,8 +72,9 @@ add_executable(subscribe_pc_node src/subscribe_pc_node.cpp)
 target_link_libraries(subscribe_pc_node ${catkin_LIBRARIES})
 
 add_executable(perception_data src/perception_data.cpp)
-target_link_libraries(perception_data ${catkin_LIBRARIES})
+target_link_libraries(perception_data ${catkin_LIBRARIES} pcl_kdtree )
 
 
-
+add_executable(kdtree_tutorial src/kdtree_tutorial.cpp)
+target_link_libraries(kdtree_tutorial ${catkin_LIBRARIES} pcl_kdtree )
 

@@ -36,16 +36,16 @@ void save_pcd(std::string pc_name, const pcl::PointCloud<pcl::PointXYZ>& input_p
 
 //segment everyting not belong to the bin
 //bin size: ~80x55x20 cm
-void segment_bin(const pcl::PointCloud<pcl::PointXYZ>::Ptr& xyz_pc_input)
+void segment_bin(const pcl::PointCloud<pcl::PointXYZ>::Ptr& xyz_pc_ptr)
 {
   
  // Create the filtering object
   pcl::PassThrough<pcl::PointXYZ> pass;
-  pass.setInputCloud (xyz_pc_input);
+  pass.setInputCloud (xyz_pc_ptr);
   pass.setFilterFieldName ("z");
   pass.setFilterLimits (0.0, 1.0);
   //pass.setFilterLimitsNegative (true);
-  pass.filter (*xyz_pc_input);
+  pass.filter (*xyz_pc_ptr);
 }
 //KdTree 
 
@@ -67,8 +67,8 @@ int main(int argc, char **argv)
   //pcl::PointCloud<pcl::PointXYZRGB>::Ptr kinect_color_pc
 
   //convert from ros msg to point cloud
-  pcl::PointCloud<pcl::PointXYZ>::Ptr xyz_pc_input;
-  pcl::fromROSMsg(ros_msg_pc, *xyz_pc_input);
+  pcl::PointCloud<pcl::PointXYZ>::Ptr xyz_pc_ptr;
+  pcl::fromROSMsg(ros_msg_pc, *xyz_pc_ptr);
   
   //pcl::PointCloud<pcl::PointXYZ>::Ptr point_cloud_ptr;
 
@@ -81,14 +81,14 @@ int main(int argc, char **argv)
         
         /*
         //convert PCLPointCloud2::Ptr to PointCloud<pcl::pointxyz>
-        pcl::PointCloud<pcl::PointXYZ>::Ptr xyz_pc_input (new pcl::PointCloud<pcl::PointXYZ>());
-        pcl::fromPCLPointCloud2(kinect_color_pc, *(xyz_pc_input));
+        pcl::PointCloud<pcl::PointXYZ>::Ptr xyz_pc_ptr (new pcl::PointCloud<pcl::PointXYZ>());
+        pcl::fromPCLPointCloud2(kinect_color_pc, *(xyz_pc_ptr));
         */
         bool res = client.call(srv);
         //segment pcd and save
         std::string item_name = std::to_string(item_number);
-        segment_bin(xyz_pc_input);
-        save_pcd(item_name, *xyz_pc_input);
+        segment_bin(xyz_pc_ptr);
+        save_pcd(item_name, *xyz_pc_ptr);
 
         ros::Duration(1.0).sleep();
       }

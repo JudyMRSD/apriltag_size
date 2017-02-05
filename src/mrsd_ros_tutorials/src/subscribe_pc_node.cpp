@@ -72,29 +72,11 @@ public:
      ROS_INFO("[Perception] Get Kinect Point Cloud Data");
   }
 
-/*
-  pcl::PointCloud<pcl::PointXYZ> conversion(const sensor_msgs::PointCloud2 input)
-{
-  pcl::PCLPointCloud2 pcl_pc;
-  pcl_conversions::toPCL(input, pcl_pc);
 
-  pcl::PointCloud<pcl::PointXYZ> cloud;
-
-  pcl::fromPCLPointCloud2(pcl_pc, cloud);
-  return cloud;
-}
-*/
-  //void saveDataCB(cv_bridge::CvImagePtr kinect_color_raw)
+ 
   bool saveDataCB(mrsd_ros_tutorials::SaveData::Request &req, 
     mrsd_ros_tutorials::SaveData::Response &res )
   {
-/*
-    SaveData.srv:
-    string item_number
-    ---
-    sensor_msgs/PointCloud2 point_cloud
-    uint64 status
-    */  
 
 //file name 
     std::cout << "Save Data request recieved: \n"<< 

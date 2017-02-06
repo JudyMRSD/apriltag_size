@@ -47,6 +47,8 @@ add_definitions(${PCL_DEFINITIONS})
 add_service_files(
    FILES
    SaveData.srv
+   kinect_apriltag_sr.srv
+	
    
  )
 #service

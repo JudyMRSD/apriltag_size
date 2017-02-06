@@ -68,8 +68,13 @@ class ImageConverter
 
   cv_bridge::CvImagePtr kinect_color_raw;
   pcl::PointCloud<pcl::PointXYZRGB>::Ptr kinect_color_pc;
-  pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_transformed;
+
+
+ // pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_transformed;
+ // cloud_transformed = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
+
   sensor_msgs::PointCloud2 ros_pc;
+  sensor_msgs::PointCloud2 tr_ros_pc;
 
 //PCD writer
   pcl::PCDWriter writer;
@@ -79,7 +84,9 @@ class ImageConverter
 //this service provides transformed point cloud 
   ros::ServiceServer kinect_apriltag_sr;
 
-
+  //listen to the transform broadcasted using apriltag
+  const tf::TransformListener tf_listener;
+  tf::StampedTransform tf_apriltag;
 public:
 
   ImageConverter()
@@ -137,25 +144,38 @@ public:
   
   bool transformCB(mrsd_ros_tutorials::SaveData::Request &req, 
     mrsd_ros_tutorials::SaveData::Response &res )
+
   {
+
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_transformed (new pcl::PointCloud<pcl::PointXYZRGB>);
     //static tf::TransformBroadcaster br1;
     static tf::TransformBroadcaster br2;
-    //listen to the transform broadcasted using apriltag
-    tf::TransformListener tf_listener;
-    tf::StampedTransform tf_apriltag;
-      try{
-        tf_listener.lookupTransform("kinect2_rgb_optical_frame","apriltag_frame",
-                                 ros::Time(0), tf_apriltag);
-      }
-      catch (tf::TransformException &ex) {
-        ROS_ERROR("%s",ex.what());
-        ros::Duration(1.0).sleep();
-      }
+    
+    try{
+      tf_listener.lookupTransform("apriltag_frame","kinect2_rgb_optical_frame",
+                               ros::Time(0), tf_apriltag);
+      std::cout << "22.1"<< std::endl;
+    }
+    catch (tf::TransformException &ex) {
+      ROS_ERROR("%s",ex.what());
+      ros::Duration(1.0).sleep();
+      std::cout << "22.2"<< std::endl;
+    }
+    std::cout << "23"<< std::endl;
     //transform the point cloud
-    pcl_ros::transformPointCloud ("transformed_apriltag_frame", *kinect_color_pc,*cloud_transformed, tf_listener);
+    std::cout<<kinect_color_pc->points.size()<<std::endl;
+    
 
+    std::cout<<cloud_transformed<<std::endl;
+    pcl_ros::transformPointCloud ("world", *kinect_color_pc,*cloud_transformed, tf_listener);
+    std::cout << "24"<< std::endl;
     //br1.sendTransform(tf::StampedTransform(tf_apriltag, ros::Time::now(), "kinect2_rgb_optical_frame","world"));
-    br2.sendTransform(tf::StampedTransform(tf_apriltag, ros::Time::now(), "transformed_apriltag_frame","world"));
+    //br2.sendTransform(tf::StampedTransform(tf_apriltag, ros::Time::now(), "transformed_apriltag_frame","world"));
+    //std::cout << "25"<< std::endl;
+    pcl::toROSMsg(*cloud_transformed, tr_ros_pc);
+    std::cout << "26"<< std::endl;
+    res.point_cloud = tr_ros_pc;
+    std::cout << "27"<< std::endl;
     return true;
   }
   /*
@@ -215,6 +235,10 @@ int main(int argc, char** argv)
 {
   ros::init(argc, argv, "image_converter");
   ImageConverter ic;
+
+  
+  std::cout << "21"<< std::endl;
+  
 
 
   

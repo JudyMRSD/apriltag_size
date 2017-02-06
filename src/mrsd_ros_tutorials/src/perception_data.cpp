@@ -17,7 +17,7 @@
 #include <cv_bridge/cv_bridge.h>
 
 #include "mrsd_ros_tutorials/SaveData.h"
-
+#include "mrsd_ros_tutorials/kinect_apriltag_sr.h"
 //for segmentation
 #include <iostream>
 #include <pcl/point_types.h>
@@ -67,16 +67,19 @@ void segment_bin(pcl::PointCloud<pcl::PointXYZ>::Ptr& xyz_pc_ptr)
 
 //---------------------------------load PCD file as pcl point cloud ------------------------------
 
-pcl::PointCloud<pcl::PointXYZ>::Ptr load_pcd(std::string file_path)
+pcl::PointCloud<pcl::PointXYZ>::Ptr load_pcd(std::string& file_path)
 { 
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
+  
+  /*
   if (pcl::io::loadPCDFile<pcl::PointXYZ> (file_path, *cloud) == -1) //* load the file
   {
     PCL_ERROR ("Couldn't read file test_pcd.pcd \n");
     return cloud;
   }
+  */
   pcl::PCLPointCloud2 cloud_blob;
-  pcl::io::loadPCDFile ("test_pcd.pcd", cloud_blob);
+  pcl::io::loadPCDFile (file_path, cloud_blob);
   pcl::fromPCLPointCloud2 (cloud_blob, *cloud); //* convert from pcl/PCLPointCloud2 to pcl::PointCloud<T>
   return cloud;
 }
@@ -163,36 +166,59 @@ int main(int argc, char **argv)
   //This node is a client
   //The service node is "ImageConverter", which takes RGB and point cloud raw data from kinect 
   ros::ServiceClient client = n.serviceClient<mrsd_ros_tutorials::SaveData>("ImageConverter");
+  ros::ServiceClient client2 = n.serviceClient<mrsd_ros_tutorials::kinect_apriltag_sr>("ImageConverter");
   //SaveData.srv defines the input and output from the service 
   mrsd_ros_tutorials::SaveData srv;
+  //transform point cloud test
+  mrsd_ros_tutorials::kinect_apriltag_sr transform_srv;
+  std::cout << "-3"<< std::endl;
+
+
   //give item_number as input for the service 
   int item_number;
   std::cout <<"please put in item number "<<std::endl;
+
   std::cin>>item_number;
+  std::cout << "-2"<< std::endl;
   srv.request.item_number = item_number;
+  std::cout << "-1"<< std::endl;
+  transform_srv.request.item_number = item_number;
+  std::cout << "1"<< std::endl;
+
   sensor_msgs::PointCloud2 ros_msg_pc;
- 
+  sensor_msgs::PointCloud2 transformed_pc;
+  std::cout << "2"<< std::endl;
   //convert from ros msg to point cloud
   pcl::PointCloud<pcl::PointXYZ>::Ptr xyz_pc_ptr;
+  std::cout << "3"<< std::endl;
   xyz_pc_ptr = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>);
-
+  std::cout << "4"<< std::endl;
   //save image when button is pressed
   if(item_number!=0){
 
         // take item number as file name, and convert sensor_msgs to pcl point cloud 
         srv.request.item_number = item_number; 
+        std::cout << "5"<< std::endl;
         bool res = client.call(srv);
+        std::cout << "6"<< std::endl;
 
         ros_msg_pc = srv.response.point_cloud;
+        std::cout << "7"<< std::endl;
+        transformed_pc = srv.response.point_cloud;
+        std::cout << "8"<< std::endl;
         pcl::fromROSMsg(ros_msg_pc, *xyz_pc_ptr);
+        std::cout << "9"<< std::endl;
        
         //segment pcd and save, for debug purpose 
         segment_bin(xyz_pc_ptr);
+        std::cout << "10"<< std::endl;
         save_pcd("segmented", xyz_pc_ptr);
+        std::cout << "11"<< std::endl;
 
         //error (xyz_pc_ptr, cad_pc_ptr);
-        
-        load_pcd("");
+        std::string file_path = "/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/model/bin_21.pcd";
+        load_pcd(file_path);
+        std::cout << "12"<< std::endl;
 
         ros::Duration(1.0).sleep();
       }

@@ -1,0 +1,4 @@
+uint16 item_number
+---
+sensor_msgs/PointCloud2 point_cloud
+uint64 status

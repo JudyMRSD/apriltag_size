@@ -8,5 +8,13 @@ roslaunch kinect2_bridge kinect2_bridge.launch
 roslaunch urdf_tutorial stl_display.launch
 ------------------------------
 ------------------------------
+test segmentation
+perception_data
+subscribe_pc_node
+
+
+-------------
 ros msg file for point cloud 
 https://github.com/cheyenlu/plaid_apc/tree/master/plaid_msgs/msg
+
+pass pointer? pass through filter

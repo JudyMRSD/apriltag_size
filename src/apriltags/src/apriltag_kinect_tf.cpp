@@ -76,7 +76,7 @@ void chatterCallback(const apriltags::AprilTagDetections::ConstPtr& msg)
 
     //tf_apriltag.setOrigin(tf::Vector3(msg->detections[0].pose.position.x,msg->detections[0].pose.position.y,msg->detections[0].pose.position.z));
     //tf_apriltag.setRotation(tf::Quaternion(msg->detections[0].pose.orientation.x,msg->detections[0].pose.orientation.y,msg->detections[0].pose.orientation.z,msg->detections[0].pose.orientation.w));
- 	tf_apriltag.setOrigin( tf::Vector3(0.0, 0.0, 0.0) );
+ 	  tf_apriltag.setOrigin( tf::Vector3(0.0, 0.0, 0.0) );
     tf_apriltag.setRotation( tf::Quaternion(0, 0, 0, 1) );
 	
  //tf_kinect_bin.setOrigin( tf::Vector3(0.0, 2.0, 0.0) );

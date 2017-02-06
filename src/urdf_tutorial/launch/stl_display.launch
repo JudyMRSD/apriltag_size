@@ -7,7 +7,7 @@
   
   <include file="$(find apriltags)/launch/apriltags_view.launch"/>
 
-  <node pkg="apriltags" type="apriltag_kinect_tf" name="apriltag_kinect_tf"/>
+  <node pkg="apriltags" type="apriltag_kinect_tf" name="apriltag_kinect_tf"/> 
 
   <!--display stl in rviz scene -->
   <include file="$(find urdf_tutorial)/launch/display.launch"/>

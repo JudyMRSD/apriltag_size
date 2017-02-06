@@ -29,6 +29,10 @@
 //debug
 #include <typeinfo>
 
+//tf transform listener 
+#include <tf/transform_listener.h>
+
+
 //------------------------------------save point cloud-------------------------------------------------- 
 //for debug and visualization purpose 
 void save_pcd(std::string pc_name, const pcl::PointCloud<pcl::PointXYZ>::Ptr& input_pc)
@@ -111,7 +115,6 @@ int nearest_dist(pcl::PointCloud<pcl::PointXYZ>::Ptr& Cloud_cad, pcl::PointXYZ s
   return dist;
 
 }
-
 
 
 //---------------Calculate error between two point clouds---------------------------------------------

@@ -31,7 +31,18 @@ generate_dynamic_reconfigure_options(
 include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  ${catkin_INCLUDE_DIRS}
+  ${Eigen_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+  ${Yaml_INCLUDE_DIRS}
+  ${apriltagscpp_INCLUDE_DIR}/apriltagscpp
 )
+
+
+
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
 #service
 add_service_files(
    FILES
@@ -77,4 +88,5 @@ target_link_libraries(perception_data ${catkin_LIBRARIES} pcl_kdtree )
 
 add_executable(kdtree_tutorial src/kdtree_tutorial.cpp)
 target_link_libraries(kdtree_tutorial ${catkin_LIBRARIES} pcl_kdtree )
+
 

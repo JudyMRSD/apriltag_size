@@ -25,7 +25,7 @@ public:
   {
     ROS_INFO("Initialized CloudPublisher Class");
     cloud_publisher_ = nh_.advertise<sensor_msgs::PointCloud2>("/out_cloud", 1);
-    cloud_subscriber_ = nh_.subscribe("/kinect2/hd/points", 1, &CloudPublisher::cloudCallback, this);
+    cloud_subscriber_ = nh_.subscribe("/camera/depth_registered/points_throttle", 1, &CloudPublisher::cloudCallback, this);
   }
 
   void cloudCallback(const sensor_msgs::PointCloud2ConstPtr& msg)
@@ -60,9 +60,9 @@ public:
   {
 
     Eigen::Matrix4f M;
-    M <<  1,  0,  0 , 1,
-          0,  1,  0,  1,
-          0,  0,  1,  2,
+    M <<  1,  0,  0 , 0,
+          0,  1,  0,  0,
+          0,  0,  1,  0,
           0,  0,  0,  1;
 
     pcl::transformPointCloud (*src, *dst, M);

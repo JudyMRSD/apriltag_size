@@ -1,0 +1,58 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:84:51: error: expected ‘)’ before numeric constant
+   tf::TransformListener tf_listener(ros::Duration(10));
+                                                   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:84:51: error: expected ‘)’ before numeric constant
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:84:50: error: expected ‘;’ at end of member declaration
+   tf::TransformListener tf_listener(ros::Duration(10));
+                                                  ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:84:51: error: expected unqualified-id before numeric constant
+   tf::TransformListener tf_listener(ros::Duration(10));
+                                                   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In member function ‘bool ImageConverter::transformCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:148:18: error: ‘((ImageConverter*)this)->ImageConverter::tf_listener’ does not have class type
+       tf_listener.lookupTransform("apriltag_frame","kinect2_rgb_optical_frame",
+                  ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:159:113: error: no matching function for call to ‘transformPointCloud(const char [27], pcl::PointCloud<pcl::PointXYZRGB>&, pcl::PointCloud<pcl::PointXYZRGB>&, <unresolved overloaded function type>)’
+     pcl_ros::transformPointCloud ("transformed_apriltag_frame", *kinect_color_pc,*cloud_transformed, tf_listener);
+                                                                                                                 ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:159:113: note: candidates are:
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:15:0:
+/opt/ros/indigo/include/pcl_ros/transforms.h:93:3: note: template<class PointT> void pcl_ros::transformPointCloud(const pcl::PointCloud<PointT>&, pcl::PointCloud<PointT>&, const tf::Transform&)
+   transformPointCloud (const pcl::PointCloud <PointT> &cloud_in, 
+   ^
+/opt/ros/indigo/include/pcl_ros/transforms.h:93:3: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:159:113: note:   mismatched types ‘const pcl::PointCloud<PointT>’ and ‘const char [27]’
+     pcl_ros::transformPointCloud ("transformed_apriltag_frame", *kinect_color_pc,*cloud_transformed, tf_listener);
+                                                                                                                 ^
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:15:0:
+/opt/ros/indigo/include/pcl_ros/transforms.h:104:3: note: template<class PointT> bool pcl_ros::transformPointCloud(const string&, const pcl::PointCloud<PointT>&, pcl::PointCloud<PointT>&, const tf::TransformListener&)
+   transformPointCloud (const std::string &target_frame, 
+   ^
+/opt/ros/indigo/include/pcl_ros/transforms.h:104:3: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:159:113: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::tf_listener’ (type ‘<unresolved overloaded function type>’) to type ‘const tf::TransformListener&’
+     pcl_ros::transformPointCloud ("transformed_apriltag_frame", *kinect_color_pc,*cloud_transformed, tf_listener);
+                                                                                                                 ^
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:15:0:
+/opt/ros/indigo/include/pcl_ros/transforms.h:118:3: note: template<class PointT> bool pcl_ros::transformPointCloud(const string&, const ros::Time&, const pcl::PointCloud<PointT>&, const string&, pcl::PointCloud<PointT>&, const tf::TransformListener&)
+   transformPointCloud (const std::string &target_frame, const ros::Time & target_time, 
+   ^
+/opt/ros/indigo/include/pcl_ros/transforms.h:118:3: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:159:113: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::kinect_color_pc.boost::shared_ptr<T>::operator*<pcl::PointCloud<pcl::PointXYZRGB> >()’ (type ‘pcl::PointCloud<pcl::PointXYZRGB>’) to type ‘const ros::Time&’
+     pcl_ros::transformPointCloud ("transformed_apriltag_frame", *kinect_color_pc,*cloud_transformed, tf_listener);
+                                                                                                                 ^
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:15:0:
+/opt/ros/indigo/include/pcl_ros/transforms.h:131:3: note: bool pcl_ros::transformPointCloud(const string&, const PointCloud2&, sensor_msgs::PointCloud2&, const tf::TransformListener&)
+   transformPointCloud (const std::string &target_frame, 
+   ^
+/opt/ros/indigo/include/pcl_ros/transforms.h:131:3: note:   no known conversion for argument 2 from ‘pcl::PointCloud<pcl::PointXYZRGB>’ to ‘const PointCloud2& {aka const sensor_msgs::PointCloud2_<std::allocator<void> >&}’
+/opt/ros/indigo/include/pcl_ros/transforms.h:143:3: note: void pcl_ros::transformPointCloud(const string&, const tf::Transform&, const PointCloud2&, sensor_msgs::PointCloud2&)
+   transformPointCloud (const std::string &target_frame, 
+   ^
+/opt/ros/indigo/include/pcl_ros/transforms.h:143:3: note:   no known conversion for argument 2 from ‘pcl::PointCloud<pcl::PointXYZRGB>’ to ‘const tf::Transform&’
+/opt/ros/indigo/include/pcl_ros/transforms.h:154:3: note: void pcl_ros::transformPointCloud(const Matrix4f&, const PointCloud2&, sensor_msgs::PointCloud2&)
+   transformPointCloud (const Eigen::Matrix4f &transform, 
+   ^
+/opt/ros/indigo/include/pcl_ros/transforms.h:154:3: note:   candidate expects 3 arguments, 4 provided
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make: *** [all] Error 2

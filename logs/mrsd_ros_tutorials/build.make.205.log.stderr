@@ -1,0 +1,20 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:139:12: error: expected primary-expression before ‘<<’ token
+         std<<cout<<*xyz_pc_ptr->points.size ()<<std::end;
+            ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:139:14: error: ‘cout’ was not declared in this scope
+         std<<cout<<*xyz_pc_ptr->points.size ()<<std::end;
+              ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:139:14: note: suggested alternative:
+In file included from /opt/ros/indigo/include/ros/time.h:54:0,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/iostream:61:18: note:   ‘std::cout’
+   extern ostream cout;  /// Linked to standard output
+                  ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:139:46: error: invalid type argument of unary ‘*’ (have ‘std::vector<pcl::PointXYZ, Eigen::aligned_allocator_indirection<pcl::PointXYZ> >::size_type {aka long unsigned int}’)
+         std<<cout<<*xyz_pc_ptr->points.size ()<<std::end;
+                                              ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

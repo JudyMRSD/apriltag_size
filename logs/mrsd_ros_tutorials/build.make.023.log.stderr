@@ -1,0 +1,17 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In member function ‘bool ImageConverter::saveDataCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:81:5: error: ‘name’ was not declared in this scope
+     name = "hard"+ name + ".jpg";
+     ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:81:5: note: suggested alternative:
+In file included from /usr/include/pcl-1.7/pcl/point_cloud.h:50:0,
+                 from /usr/include/pcl-1.7/pcl/pcl_base.h:53,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:45,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/point_traits.h:114:12: note:   ‘pcl::traits::name’
+     struct name : name<typename POD<PointT>::type, Tag, dummy>
+            ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

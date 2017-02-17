@@ -1,0 +1,14 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:169:3: error: ‘kinect_apriltag_sr’ is not a member of ‘mrsd_ros_tutorials’
+   mrsd_ros_tutorials::kinect_apriltag_sr transform_srv;
+   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:169:42: error: expected ‘;’ before ‘transform_srv’
+   mrsd_ros_tutorials::kinect_apriltag_sr transform_srv;
+                                          ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:177:3: error: ‘transform_srv’ was not declared in this scope
+   transform_srv.request.item_number = item_number;
+   ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

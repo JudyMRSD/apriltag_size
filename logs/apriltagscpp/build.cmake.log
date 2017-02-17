@@ -1,0 +1,26 @@
+Not searching for unused variables given on the command line.
+[36m--[0m The C compiler identification is GNU 4.8.4
+[36m--[0m The CXX compiler identification is GNU 4.8.4
+[36m--[0m Check for working C compiler: /usr/bin/cc
+[36m--[0m Check for working C compiler: /usr/bin/cc -- works
+[36m--[0m Detecting C compiler ABI info
+[36m--[0m Detecting C compiler ABI info - done
+[36m--[0m Check for working CXX compiler: /usr/bin/c++
+[36m--[0m Check for working CXX compiler: /usr/bin/c++ -- works
+[36m--[0m Detecting CXX compiler ABI info
+[36m--[0m Detecting CXX compiler ABI info - done
+[36m--[0m Found PkgConfig: /usr/bin/pkg-config (found version "0.26")
+[36m--[0m checking for one of the modules 'opencv>=2.3;opencv-2.3.1'
+[36m--[0m checking for module 'cairo'
+[36m--[0m   found cairo, version 1.13.1
+[36m--[0m Build type: Release
+[36m--[0m USING CXXFLAGS = '-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -D_FORTIFY_SOURCE=2  -frounding-math -O3 -DNDEBUG'
+[36m--[0m USING EXEFLAGS = ' -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,--as-needed '
+[36m--[0m Targetting Unix Makefiles
+[36m--[0m Using /usr/bin/c++ compiler.
+[36m--[0m Requested component: MPFR
+[36m--[0m Requested component: GMP
+[36m--[0m Boost version: 1.54.0
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/jin/ros/apriltag_size/build/apriltagscpp

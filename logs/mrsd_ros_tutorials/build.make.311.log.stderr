@@ -1,0 +1,8 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In member function ‘bool ImageConverter::transformCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:159:81: error: ‘tf_transform_cloud’ was not declared in this scope
+     pcl_ros::transformPointCloud ("world", *kinect_color_pc,*cloud_transformed, tf_transform_cloud);
+                                                                                 ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

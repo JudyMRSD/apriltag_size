@@ -1,0 +1,11 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int error(pcl::PointCloud<pcl::PointXYZ>::Ptr&, pcl::PointCloud<pcl::PointXYZ>::Ptr&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:81:43: error: ‘nearest_dist’ cannot be used as a function
+     nearest_dist(Cloud_kinect, searchPoint);
+                                           ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int nearest_dist(pcl::PointCloud<pcl::PointXYZ>::Ptr&, pcl::PointXYZ)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:117:25: error: ‘Cloud_kinect’ was not declared in this scope
+   kdtree.setInputCloud (Cloud_kinect);
+                         ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

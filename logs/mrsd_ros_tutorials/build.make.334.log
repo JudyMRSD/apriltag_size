@@ -1,0 +1,30 @@
+[ 11%] Built target abstracted_class_node
+[ 17%] [34m[1mGenerating dynamic reconfigure files from config/box_tf_offsets.cfg: /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/include/mrsd_ros_tutorials/box_tf_offsetsConfig.h /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/lib/python2.7/dist-packages/mrsd_ros_tutorials/cfg/box_tf_offsetsConfig.py
+[0m[ 23%] Built target in_source_node
+Generating reconfiguration files for Transforms in mrsd_ros_tutorials
+Wrote header file in /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/include/mrsd_ros_tutorials/TransformsConfig.h
+[ 29%] [ 29%] Built target kdtree_tutorial
+Built target mrsd_ros_tutorials_gencfg
+[ 35%] Built target linear_node
+[ 35%] Built target std_msgs_generate_messages_lisp
+[ 35%] Built target sensor_msgs_generate_messages_lisp
+[ 35%] Built target std_msgs_generate_messages_cpp
+[ 35%] Built target _mrsd_ros_tutorials_generate_messages_check_deps_SaveData
+[ 35%] Built target sensor_msgs_generate_messages_cpp
+[ 35%] Built target _mrsd_ros_tutorials_generate_messages_check_deps_kinect_apriltag_sr
+[ 35%] Built target std_msgs_generate_messages_py
+[ 35%] Built target sensor_msgs_generate_messages_py
+[35m[1mScanning dependencies of target subscribe_pc_node
+[ 41%] Built target perception_data
+[ 47%] Built target pointcloud_transform_node
+[0m[35m[1mScanning dependencies of target display_box_marker
+[ 58%] [ 64%] Built target mrsd_ros_tutorials_generate_messages_lisp
+[32mBuilding CXX object CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o
+[0m[0m[ 76%] Built target mrsd_ros_tutorials_generate_messages_cpp
+[ 82%] [32mBuilding CXX object CMakeFiles/display_box_marker.dir/src/display_box_marker.cpp.o
+[0m[100%] Built target mrsd_ros_tutorials_generate_messages_py
+[100%] Built target mrsd_ros_tutorials_generate_messages
+[31m[1mLinking CXX executable /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/lib/mrsd_ros_tutorials/display_box_marker
+[0m[100%] Built target display_box_marker
+[31m[1mLinking CXX executable /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/lib/mrsd_ros_tutorials/subscribe_pc_node
+[0m[100%] Built target subscribe_pc_node

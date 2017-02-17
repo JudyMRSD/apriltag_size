@@ -1,0 +1,10 @@
+[31m[1mCMake Error[0m at /home/jin/ros/apriltag_size/src/apriltags/CMakeLists.txt:85 (add_executable):
+  Cannot find source file:
+
+    src/frame_tf_broadcaster.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+make: *** [cmake_check_build_system] Error 1

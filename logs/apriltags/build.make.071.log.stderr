@@ -1,0 +1,10 @@
+/home/jin/ros/apriltag_size/src/apriltags/src/apriltag_kinect_tf.cpp: In function ‘void chatterCallback(const ConstPtr&)’:
+/home/jin/ros/apriltag_size/src/apriltags/src/apriltag_kinect_tf.cpp:79:12: error: ‘std::transform’ does not have class type
+   transform.setOrigin( tf::Vector3(0.0, 0.0, 0.0) );
+            ^
+/home/jin/ros/apriltag_size/src/apriltags/src/apriltag_kinect_tf.cpp:80:14: error: ‘std::transform’ does not have class type
+     transform.setRotation( tf::Quaternion(0, 0, 0, 1) );
+              ^
+make[2]: *** [CMakeFiles/apriltag_kinect_tf.dir/src/apriltag_kinect_tf.cpp.o] Error 1
+make[1]: *** [CMakeFiles/apriltag_kinect_tf.dir/all] Error 2
+make: *** [all] Error 2

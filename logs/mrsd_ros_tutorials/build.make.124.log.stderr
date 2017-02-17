@@ -1,0 +1,10 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:91:41: error: invalid initialization of reference of type ‘const pcl::PointCloud<pcl::PointXYZ>&’ from expression of type ‘pcl::PointCloud<pcl::PointXYZ>::Ptr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}’
+         save_pcd(item_name, xyz_pc_input);
+                                         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:27:6: error: in passing argument 2 of ‘void save_pcd(std::string, const pcl::PointCloud<pcl::PointXYZ>&)’
+ void save_pcd(std::string pc_name, const pcl::PointCloud<pcl::PointXYZ>& input_pc)
+      ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

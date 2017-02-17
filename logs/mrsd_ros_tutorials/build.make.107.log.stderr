@@ -1,0 +1,40 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void segment_bin(const ImageConstPtr&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:43:38: error: no matching function for call to ‘fromROSMsg(const sensor_msgs::Image_<std::allocator<void> >&, pcl::PointCloud<pcl::PointXYZ>&)’
+   pcl::fromROSMsg(*msg, *xyz_pc_input);
+                                      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:43:38: note: candidate is:
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:13:0:
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:547:8: note: template<class T> void pcl::fromROSMsg(const PointCloud2&, pcl::PointCloud<PointT>&)
+   void fromROSMsg(const sensor_msgs::PointCloud2 &cloud, pcl::PointCloud<T> &pcl_cloud)
+        ^
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:547:8: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:43:38: note:   cannot convert ‘(& msg)->boost::shared_ptr<T>::operator*<const sensor_msgs::Image_<std::allocator<void> > >()’ (type ‘const sensor_msgs::Image_<std::allocator<void> >’) to type ‘const PointCloud2& {aka const sensor_msgs::PointCloud2_<std::allocator<void> >&}’
+   pcl::fromROSMsg(*msg, *xyz_pc_input);
+                                      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:88:31: error: invalid initialization of reference of type ‘const ImageConstPtr& {aka const boost::shared_ptr<const sensor_msgs::Image_<std::allocator<void> > >&}’ from expression of type ‘sensor_msgs::PointCloud2’
+         segment_bin(ros_msg_pc);
+                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:38:6: error: in passing argument 1 of ‘void segment_bin(const ImageConstPtr&)’
+ void segment_bin(const sensor_msgs::ImageConstPtr& msg)
+      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:89:41: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+         save_pcd(item_number, ros_msg_pc);
+                                         ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /opt/ros/indigo/include/ros/platform.h:55,
+                 from /opt/ros/indigo/include/ros/time.h:53,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:89:41: error: invalid initialization of reference of type ‘const Ptr& {aka const boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >&}’ from expression of type ‘sensor_msgs::PointCloud2’
+         save_pcd(item_number, ros_msg_pc);
+                                         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:27:6: error: in passing argument 2 of ‘void save_pcd(std::string, const Ptr&)’
+ void save_pcd(std::string pc_name, const pcl::PointCloud<pcl::PointXYZRGB>::Ptr& input_pc)
+      ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,299 @@
+The dependencies of the message/service 'mrsd_ros_tutorials/SaveData' have changed. Please rerun cmake.
+make[2]: *** [CMakeFiles/_mrsd_ros_tutorials_generate_messages_check_deps_SaveData] Error 1
+make[1]: *** [CMakeFiles/_mrsd_ros_tutorials_generate_messages_check_deps_SaveData.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void save_pcd(std::string, sensor_msgs::PointCloud2)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:31: error: no match for ‘operator*’ (operand type is ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’)
+   writer.writeBinary(pc_name, *input_pc);
+                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:31: note: candidates are:
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/valarray:1169:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__multiplies, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__multiplies, _Tp>::result_type> std::operator*(const _Tp&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(*, __multiplies)
+ ^
+/usr/include/c++/4.8/valarray:1169:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   candidate expects 2 arguments, 1 provided
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/valarray:1169:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__multiplies, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__multiplies, _Tp>::result_type> std::operator*(const std::valarray<_Tp>&, const _Tp&)
+ _DEFINE_BINARY_OPERATOR(*, __multiplies)
+ ^
+/usr/include/c++/4.8/valarray:1169:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::valarray<_Tp>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/valarray:1169:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__multiplies, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__multiplies, _Tp>::result_type> std::operator*(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(*, __multiplies)
+ ^
+/usr/include/c++/4.8/valarray:1169:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::valarray<_Tp>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::valarray<typename _Dom::value_type>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   candidate expects 2 arguments, 1 provided
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__multiplies, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:15,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/complex:402:5: note: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+     operator*(const _Tp& __x, const complex<_Tp>& __y)
+     ^
+/usr/include/c++/4.8/complex:402:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   candidate expects 2 arguments, 1 provided
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:15,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/complex:393:5: note: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+     operator*(const complex<_Tp>& __x, const _Tp& __y)
+     ^
+/usr/include/c++/4.8/complex:393:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::complex<_Tp>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:15,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/complex:384:5: note: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+     operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+     ^
+/usr/include/c++/4.8/complex:384:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:31:32: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::complex<_Tp>’
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void segment_bin(sensor_msgs::PointCloud2)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:42:31: error: no matching function for call to ‘pcl::PassThrough<pcl::PointXYZ>::setInputCloud(const PointCloud2&)’
+   pass.setInputCloud (input_pc);
+                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:42:31: note: candidate is:
+In file included from /usr/include/pcl-1.7/pcl/common/io.h:45:0,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:11:
+/usr/include/pcl-1.7/pcl/pcl_base.h:95:7: note: void pcl::PCLBase<PointT>::setInputCloud(const PointCloudConstPtr&) [with PointT = pcl::PointXYZ; pcl::PCLBase<PointT>::PointCloudConstPtr = boost::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >]
+       setInputCloud (const PointCloudConstPtr &cloud);
+       ^
+/usr/include/pcl-1.7/pcl/pcl_base.h:95:7: note:   no known conversion for argument 1 from ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ to ‘const PointCloudConstPtr& {aka const boost::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&}’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:16: error: no match for ‘operator*’ (operand type is ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’)
+   pass.filter (*input_pc);
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:16: note: candidates are:
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/valarray:1169:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__multiplies, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__multiplies, _Tp>::result_type> std::operator*(const _Tp&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(*, __multiplies)
+ ^
+/usr/include/c++/4.8/valarray:1169:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   candidate expects 2 arguments, 1 provided
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/valarray:1169:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__multiplies, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__multiplies, _Tp>::result_type> std::operator*(const std::valarray<_Tp>&, const _Tp&)
+ _DEFINE_BINARY_OPERATOR(*, __multiplies)
+ ^
+/usr/include/c++/4.8/valarray:1169:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::valarray<_Tp>’
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/valarray:1169:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__multiplies, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__multiplies, _Tp>::result_type> std::operator*(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(*, __multiplies)
+ ^
+/usr/include/c++/4.8/valarray:1169:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::valarray<_Tp>’
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::valarray<typename _Dom::value_type>’
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   candidate expects 2 arguments, 1 provided
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__multiplies, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:16:
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__multiplies, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__multiplies, typename _Dom1::value_type>::result_type> std::operator*(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(*, __multiplies)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:404:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:15,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/complex:402:5: note: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+     operator*(const _Tp& __x, const complex<_Tp>& __y)
+     ^
+/usr/include/c++/4.8/complex:402:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   candidate expects 2 arguments, 1 provided
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:15,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/complex:393:5: note: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+     operator*(const complex<_Tp>& __x, const _Tp& __y)
+     ^
+/usr/include/c++/4.8/complex:393:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::complex<_Tp>’
+   pass.filter (*input_pc);
+                 ^
+In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:15,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/complex:384:5: note: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+     operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+     ^
+/usr/include/c++/4.8/complex:384:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:17: note:   ‘const PointCloud2 {aka const sensor_msgs::PointCloud2_<std::allocator<void> >}’ is not derived from ‘const std::complex<_Tp>’
+   pass.filter (*input_pc);
+                 ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:71:9: error: ‘kinect_color_pc’ was not declared in this scope
+         kinect_color_pc = srv.response.point_cloud;
+         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:71:40: error: ‘mrsd_ros_tutorials::SaveData::Response’ has no member named ‘point_cloud’
+         kinect_color_pc = srv.response.point_cloud;
+                                        ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

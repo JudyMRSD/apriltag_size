@@ -1,0 +1,24 @@
+[ 66%] Built target apriltagscpp
+[ 73%] Built target camtest
+[ 80%] Built target gltest
+[ 86%] Built target maketags
+[ 93%] Built target quadtest
+[100%] Built target tagtest
+[36mInstall the project...
+[0m-- Install configuration: "Release"
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/share/apriltagscpp/package.xml
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/lib/apriltagscpp/cmake/apriltagscppConfig.cmake
+-- Installing: /home/jin/ros/apriltag_size/devel/include/apriltagscpp
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/GrayModel.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/DebugImage.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/Refine.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/MathUtil.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/CameraUtil.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/AprilTypes.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/TagDetector.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/Geometry.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/TagDetection.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/UnionFindSimple.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/Profiler.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/include/apriltagscpp/TagFamily.h
+-- Up-to-date: /home/jin/ros/apriltag_size/devel/lib/libapriltagscpp.so

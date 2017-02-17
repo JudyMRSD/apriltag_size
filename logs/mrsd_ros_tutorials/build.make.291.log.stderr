@@ -1,0 +1,39 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:166:48: error: ‘kinect_apriltag_sr’ is not a member of ‘mrsd_ros_tutorials’
+   ros::ServiceClient client2 = n.serviceClient<mrsd_ros_tutorials::kinect_apriltag_sr>("ImageConverter");
+                                                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:166:48: error: ‘kinect_apriltag_sr’ is not a member of ‘mrsd_ros_tutorials’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:166:104: error: no matching function for call to ‘ros::NodeHandle::serviceClient(const char [15])’
+   ros::ServiceClient client2 = n.serviceClient<mrsd_ros_tutorials::kinect_apriltag_sr>("ImageConverter");
+                                                                                                        ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:166:104: note: candidates are:
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1239:17: note: template<class MReq, class MRes> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)
+   ServiceClient serviceClient(const std::string& service_name, bool persistent = false, 
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1239:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:166:104: error: template argument 1 is invalid
+   ros::ServiceClient client2 = n.serviceClient<mrsd_ros_tutorials::kinect_apriltag_sr>("ImageConverter");
+                                                                                                        ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1259:17: note: template<class Service> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)
+   ServiceClient serviceClient(const std::string& service_name, bool persistent = false, 
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1259:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:166:104: error: template argument 1 is invalid
+   ros::ServiceClient client2 = n.serviceClient<mrsd_ros_tutorials::kinect_apriltag_sr>("ImageConverter");
+                                                                                                        ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:170:3: error: ‘kinect_apriltag_sr’ is not a member of ‘mrsd_ros_tutorials’
+   mrsd_ros_tutorials::kinect_apriltag_sr transform_srv;
+   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:170:42: error: expected ‘;’ before ‘transform_srv’
+   mrsd_ros_tutorials::kinect_apriltag_sr transform_srv;
+                                          ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:178:3: error: ‘transform_srv’ was not declared in this scope
+   transform_srv.request.item_number = item_number;
+   ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

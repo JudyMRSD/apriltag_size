@@ -1,0 +1,13 @@
+[31m[1mCMake Error[0m at /home/jin/ros/apriltag_size/build/mrsd_ros_tutorials/cmake/mrsd_ros_tutorials-genmsg.cmake:3 (message):
+  Could not find messages which
+  '/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/srv/SaveData.srv'
+  depends on.  Did you forget to specify generate_messages(DEPENDENCIES ...)?
+
+  Cannot locate message [PointCloud2Ptr] in package [sensor_msgs] with paths
+  [['/opt/ros/indigo/share/sensor_msgs/cmake/../msg']]
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/indigo/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  CMakeLists.txt:41 (generate_messages)
+
+
+make: *** [cmake_check_build_system] Error 1

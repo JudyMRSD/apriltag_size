@@ -1,0 +1,8 @@
+prefix=/home/jin/ros/apriltag_size/devel/.private/urdf_tutorial
+
+Name: urdf_tutorial
+Description: Description of urdf_tutorial
+Version: 0.2.4
+Cflags: 
+Libs: -L/home/jin/ros/apriltag_size/devel/.private/urdf_tutorial/lib 
+Requires: 

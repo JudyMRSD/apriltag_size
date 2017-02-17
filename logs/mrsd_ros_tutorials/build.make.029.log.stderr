@@ -1,0 +1,27 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:36:19: error: empty character constant
+   if(item_number!=''){
+                   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:28:3: error: ‘string’ was not declared in this scope
+   string item_number;
+   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:28:3: note: suggested alternatives:
+In file included from /usr/include/c++/4.8/string:39:0,
+                 from /opt/ros/indigo/include/ros/platform.h:55,
+                 from /opt/ros/indigo/include/ros/time.h:53,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/bits/stringfwd.h:62:33: note:   ‘std::string’
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/include/c++/4.8/bits/stringfwd.h:62:33: note:   ‘std::string’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:28:10: error: expected ‘;’ before ‘item_number’
+   string item_number;
+          ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:29:13: error: ‘item_number’ was not declared in this scope
+   std::cin>>item_number;
+             ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

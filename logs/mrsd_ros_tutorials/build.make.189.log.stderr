@@ -1,0 +1,109 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:21: error: no match for ‘operator=’ (operand types are ‘sensor_msgs::PointCloud2ConstPtr {aka boost::shared_ptr<const sensor_msgs::PointCloud2_<std::allocator<void> > >}’ and ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’)
+         ros_msg_ptr = &srv.response.point_cloud;
+                     ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:21: note: candidates are:
+In file included from /usr/include/boost/shared_ptr.hpp:17:0,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/boost/smart_ptr/shared_ptr.hpp:505:18: note: boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(const boost::shared_ptr<T>&) [with T = const sensor_msgs::PointCloud2_<std::allocator<void> >]
+     shared_ptr & operator=( shared_ptr const & r ) BOOST_NOEXCEPT
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:505:18: note:   no known conversion for argument 1 from ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’ to ‘const boost::shared_ptr<const sensor_msgs::PointCloud2_<std::allocator<void> > >&’
+/usr/include/boost/smart_ptr/shared_ptr.hpp:514:18: note: template<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(const boost::shared_ptr<Y>&) [with Y = Y; T = const sensor_msgs::PointCloud2_<std::allocator<void> >]
+     shared_ptr & operator=(shared_ptr<Y> const & r) BOOST_NOEXCEPT
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:514:18: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:21: note:   mismatched types ‘const boost::shared_ptr<X>’ and ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’
+         ros_msg_ptr = &srv.response.point_cloud;
+                     ^
+In file included from /usr/include/boost/shared_ptr.hpp:17:0,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/boost/smart_ptr/shared_ptr.hpp:525:18: note: template<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&) [with Y = Y; T = const sensor_msgs::PointCloud2_<std::allocator<void> >]
+     shared_ptr & operator=( std::auto_ptr<Y> & r )
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:525:18: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:21: note:   mismatched types ‘std::auto_ptr<Y>’ and ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’
+         ros_msg_ptr = &srv.response.point_cloud;
+                     ^
+In file included from /usr/include/boost/shared_ptr.hpp:17:0,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/boost/smart_ptr/shared_ptr.hpp:534:18: note: template<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&) [with Y = Y; T = const sensor_msgs::PointCloud2_<std::allocator<void> >]
+     shared_ptr & operator=( std::auto_ptr<Y> && r )
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:534:18: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:21: note:   mismatched types ‘std::auto_ptr<Y>’ and ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’
+         ros_msg_ptr = &srv.response.point_cloud;
+                     ^
+In file included from /usr/include/boost/shared_ptr.hpp:17:0,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/boost/smart_ptr/shared_ptr.hpp:556:18: note: template<class Y, class D> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::unique_ptr<_Up, _Ep>&&) [with Y = Y; D = D; T = const sensor_msgs::PointCloud2_<std::allocator<void> >]
+     shared_ptr & operator=( std::unique_ptr<Y, D> && r )
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:556:18: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:21: note:   mismatched types ‘std::unique_ptr<_Tp, _Dp>’ and ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’
+         ros_msg_ptr = &srv.response.point_cloud;
+                     ^
+In file included from /usr/include/boost/shared_ptr.hpp:17:0,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/boost/smart_ptr/shared_ptr.hpp:592:18: note: boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<T>&&) [with T = const sensor_msgs::PointCloud2_<std::allocator<void> >]
+     shared_ptr & operator=( shared_ptr && r ) BOOST_NOEXCEPT
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:592:18: note:   no known conversion for argument 1 from ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’ to ‘boost::shared_ptr<const sensor_msgs::PointCloud2_<std::allocator<void> > >&&’
+/usr/include/boost/smart_ptr/shared_ptr.hpp:599:18: note: template<class Y> boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = Y; T = const sensor_msgs::PointCloud2_<std::allocator<void> >]
+     shared_ptr & operator=( shared_ptr<Y> && r ) BOOST_NOEXCEPT
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:599:18: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:21: note:   mismatched types ‘boost::shared_ptr<X>’ and ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’
+         ros_msg_ptr = &srv.response.point_cloud;
+                     ^
+In file included from /usr/include/boost/shared_ptr.hpp:17:0,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/boost/smart_ptr/shared_ptr.hpp:609:18: note: boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::detail::sp_nullptr_t) [with T = const sensor_msgs::PointCloud2_<std::allocator<void> >; boost::detail::sp_nullptr_t = std::nullptr_t]
+     shared_ptr & operator=( boost::detail::sp_nullptr_t ) BOOST_NOEXCEPT // never throws
+                  ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:609:18: note:   no known conversion for argument 1 from ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’ to ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,10 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:220:87: error: invalid initialization of non-const reference of type ‘std::string& {aka std::basic_string<char>&}’ from an rvalue of type ‘const char*’
+         load_pcd("/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/model/bin_21.pcd");
+                                                                                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:70:37: error: in passing argument 1 of ‘pcl::PointCloud<pcl::PointXYZ>::Ptr load_pcd(std::string&)’
+ pcl::PointCloud<pcl::PointXYZ>::Ptr load_pcd(std::string& file_path)
+                                     ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

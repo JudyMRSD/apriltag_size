@@ -1,0 +1,15 @@
+/home/jin/ros/apriltag_size/devel/share/apriltagscpp/package.xml
+/home/jin/ros/apriltag_size/devel/lib/apriltagscpp/cmake/apriltagscppConfig.cmake
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/GrayModel.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/DebugImage.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/Refine.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/MathUtil.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/CameraUtil.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/AprilTypes.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/TagDetector.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/Geometry.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/TagDetection.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/UnionFindSimple.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/Profiler.h
+/home/jin/ros/apriltag_size/devel/include/apriltagscpp/TagFamily.h
+/home/jin/ros/apriltag_size/devel/lib/libapriltagscpp.so

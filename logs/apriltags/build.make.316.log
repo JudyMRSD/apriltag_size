@@ -1,0 +1,15 @@
+[ 11%] Built target apriltag_kinect_tf
+[ 11%] Built target geometry_msgs_generate_messages_cpp
+[ 11%] Built target _apriltags_generate_messages_check_deps_AprilTagDetections
+[ 11%] Built target std_msgs_generate_messages_cpp
+[ 11%] Built target geometry_msgs_generate_messages_lisp
+[ 11%] Built target std_msgs_generate_messages_lisp
+[ 11%] Built target _apriltags_generate_messages_check_deps_AprilTagDetection
+[ 11%] Built target geometry_msgs_generate_messages_py
+[ 11%] Built target std_msgs_generate_messages_py
+[ 33%] Built target apriltags_generate_messages_cpp
+[ 55%] Built target apriltags_generate_messages_lisp
+[ 88%] Built target apriltags_generate_messages_py
+[ 88%] Built target apriltags_gencpp
+[ 88%] Built target apriltags_generate_messages
+[100%] Built target apriltags

@@ -1,0 +1,11 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘pcl::PointCloud<pcl::PointXYZ>::Ptr load_pcd(std::string)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:72:15: error: could not convert ‘-1’ from ‘int’ to ‘pcl::PointCloud<pcl::PointXYZ>::Ptr {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}’
+     return (-1);
+               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:192:30: error: expected primary-expression before ‘file_path’
+         load_pcd(std::string file_path);
+                              ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,4 @@
+beginner_tutorials
+/home/jin/ros/apriltag_size/devel/.private/beginner_tutorials/lib/pkgconfig/beginner_tutorials.pc /home/jin/ros/apriltag_size/devel/lib/pkgconfig/beginner_tutorials.pc
+/home/jin/ros/apriltag_size/devel/.private/beginner_tutorials/share/beginner_tutorials/cmake/beginner_tutorialsConfig.cmake /home/jin/ros/apriltag_size/devel/share/beginner_tutorials/cmake/beginner_tutorialsConfig.cmake
+/home/jin/ros/apriltag_size/devel/.private/beginner_tutorials/share/beginner_tutorials/cmake/beginner_tutorialsConfig-version.cmake /home/jin/ros/apriltag_size/devel/share/beginner_tutorials/cmake/beginner_tutorialsConfig-version.cmake

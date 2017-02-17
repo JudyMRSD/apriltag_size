@@ -1,0 +1,6 @@
+devel_space: /home/jin/ros/apriltag_size/devel
+install: false
+install_space: /home/jin/ros/apriltag_size/install
+profile: default
+source_space: /home/jin/ros/apriltag_size/src
+workspace: /home/jin/ros/apriltag_size

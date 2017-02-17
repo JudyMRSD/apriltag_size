@@ -1,0 +1,31 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void segment_bin(const pcl::PointCloud<pcl::PointXYZ>&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:44:35: error: no matching function for call to ‘pcl::PassThrough<pcl::PointXYZ>::setInputCloud(const pcl::PointCloud<pcl::PointXYZ>&)’
+   pass.setInputCloud (xyz_pc_input);
+                                   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:44:35: note: candidate is:
+In file included from /usr/include/pcl-1.7/pcl/common/io.h:45:0,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:11:
+/usr/include/pcl-1.7/pcl/pcl_base.h:95:7: note: void pcl::PCLBase<PointT>::setInputCloud(const PointCloudConstPtr&) [with PointT = pcl::PointXYZ; pcl::PCLBase<PointT>::PointCloudConstPtr = boost::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >]
+       setInputCloud (const PointCloudConstPtr &cloud);
+       ^
+/usr/include/pcl-1.7/pcl/pcl_base.h:95:7: note:   no known conversion for argument 1 from ‘const pcl::PointCloud<pcl::PointXYZ>’ to ‘const PointCloudConstPtr& {aka const boost::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&}’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:48:16: error: no match for ‘operator*’ (operand type is ‘const pcl::PointCloud<pcl::PointXYZ>’)
+   pass.filter (*xyz_pc_input);
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:89:31: error: invalid initialization of reference of type ‘const pcl::PointCloud<pcl::PointXYZ>&’ from expression of type ‘sensor_msgs::PointCloud2’
+         segment_bin(ros_msg_pc);
+                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:39:6: error: in passing argument 1 of ‘void segment_bin(const pcl::PointCloud<pcl::PointXYZ>&)’
+ void segment_bin(const pcl::PointCloud<pcl::PointXYZ>& xyz_pc_input)
+      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:90:39: error: invalid initialization of reference of type ‘const pcl::PointCloud<pcl::PointXYZ>&’ from expression of type ‘sensor_msgs::PointCloud2’
+         save_pcd(item_name, ros_msg_pc);
+                                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:27:6: error: in passing argument 2 of ‘void save_pcd(std::string, const pcl::PointCloud<pcl::PointXYZ>&)’
+ void save_pcd(std::string pc_name, const pcl::PointCloud<pcl::PointXYZ>& input_pc)
+      ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

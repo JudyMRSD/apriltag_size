@@ -1,0 +1,30 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:163:3: error: expected ‘;’ after class definition
+   }
+   ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In constructor ‘ImageConverter::ImageConverter()’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:89:62: error: ‘apriltagCB’ is not a member of ‘ImageConverter’
+     apriltag_sub = nh.subscribe("/apriltags/detections", 1, &ImageConverter::apriltagCB, this);
+                                                              ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:91:54: error: ‘saveDataCB’ is not a member of ‘ImageConverter’
+     service = nh.advertiseService("ImageConverter", &ImageConverter::saveDataCB, this);
+                                                      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In function ‘bool saveDataCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:179:23: error: ‘kinect_color_raw’ was not declared in this scope
+     cv::imwrite(name, kinect_color_raw->image);
+                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:184:37: error: ‘kinect_color_pc’ was not declared in this scope
+     std::cout <<"service address"<< kinect_color_pc<< std::endl;
+                                     ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:185:5: error: ‘writer’ was not declared in this scope
+     writer.writeBinary(pc_name, *kinect_color_pc);
+     ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:190:37: error: ‘ros_pc’ was not declared in this scope
+     pcl::toROSMsg(*kinect_color_pc, ros_pc);
+                                     ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: At global scope:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:196:1: error: expected declaration before ‘}’ token
+ };
+ ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make: *** [all] Error 2

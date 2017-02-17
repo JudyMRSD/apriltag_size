@@ -1,0 +1,23 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/kdtree_tutorial.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/kdtree_tutorial.cpp:62:7: error: redeclaration of ‘int K’
+   int K = 10;
+       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/kdtree_tutorial.cpp:42:7: error: ‘int K’ previously declared here
+   int K = 1;
+       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/kdtree_tutorial.cpp:64:39: error: redeclaration of ‘std::vector<int> pointIdxNKNSearch’
+   std::vector<int> pointIdxNKNSearch(K);
+                                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/kdtree_tutorial.cpp:44:20: error: ‘std::vector<int> pointIdxNKNSearch’ previously declared here
+   std::vector<int> pointIdxNKNSearch(K);
+                    ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/kdtree_tutorial.cpp:65:47: error: redeclaration of ‘std::vector<float> pointNKNSquaredDistance’
+   std::vector<float> pointNKNSquaredDistance(K);
+                                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/kdtree_tutorial.cpp:45:22: error: ‘std::vector<float> pointNKNSquaredDistance’ previously declared here
+   std::vector<float> pointNKNSquaredDistance(K);
+                      ^
+make[2]: *** [CMakeFiles/kdtree_tutorial.dir/src/kdtree_tutorial.cpp.o] Error 1
+make[1]: *** [CMakeFiles/kdtree_tutorial.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

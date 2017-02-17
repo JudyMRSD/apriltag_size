@@ -1,0 +1,20 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:259:9: error: ‘transformed_pub’ was not declared in this scope
+         transformed_pub.publish(tr_ros_pc);
+         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:259:33: error: ‘tr_ros_pc’ was not declared in this scope
+         transformed_pub.publish(tr_ros_pc);
+                                 ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:205:16: error: redeclaration of ‘bool res’
+           bool res = client.call(transform_srv);
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:204:16: error: ‘bool res’ previously declared here
+           bool res = client.call(srv);
+                ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

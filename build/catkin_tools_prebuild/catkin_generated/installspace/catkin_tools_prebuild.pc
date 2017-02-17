@@ -1,0 +1,8 @@
+prefix=/home/jin/ros/apriltag_size/install
+
+Name: catkin_tools_prebuild
+Description: Description of catkin_tools_prebuild
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jin/ros/apriltag_size/install/lib 
+Requires: 

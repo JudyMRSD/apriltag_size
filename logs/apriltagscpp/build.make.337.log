@@ -1,0 +1,6 @@
+[ 66%] Built target apriltagscpp
+[ 80%] [ 80%] Built target maketags
+Built target gltest
+[ 86%] Built target camtest
+[ 93%] Built target quadtest
+[100%] Built target tagtest

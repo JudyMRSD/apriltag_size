@@ -1,0 +1,1 @@
+/home/jin/ros/apriltag_size/devel/.private/apriltags/share/apriltags/cmake/apriltagsConfig-version.cmake

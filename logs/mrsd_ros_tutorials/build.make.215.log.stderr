@@ -1,0 +1,55 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int error(pcl::PointCloud<pcl::PointXYZ>::Ptr&, pcl::PointXYZ)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:84:39: error: conflicting declaration ‘std::vector<int> pointIdxNKNSearch’
+   std::vector<int> pointIdxNKNSearch(K);
+                                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:82:7: error: ‘pointIdxNKNSearch’ has a previous declaration as ‘int pointIdxNKNSearch’
+   int pointIdxNKNSearch;
+       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:85:47: error: conflicting declaration ‘std::vector<float> pointNKNSquaredDistance’
+   std::vector<float> pointNKNSquaredDistance(K);
+                                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:83:9: error: ‘pointNKNSquaredDistance’ has a previous declaration as ‘float pointNKNSquaredDistance’
+   float pointNKNSquaredDistance;
+         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:99:89: error: no matching function for call to ‘pcl::KdTreeFLANN<pcl::PointXYZ>::nearestKSearch(pcl::PointXYZ&, int&, int&, float&)’
+   if ( kdtree.nearestKSearch (searchPoint, K, pointIdxNKNSearch, pointNKNSquaredDistance) > 0 )
+                                                                                         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:99:89: note: candidates are:
+In file included from /usr/include/pcl-1.7/pcl/search/kdtree.h:44:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:27:
+/usr/include/pcl-1.7/pcl/kdtree/kdtree_flann.h:161:7: note: int pcl::KdTreeFLANN<PointT, Dist>::nearestKSearch(const PointT&, int, std::vector<int>&, std::vector<float>&) const [with PointT = pcl::PointXYZ; Dist = flann::L2_Simple<float>]
+       nearestKSearch (const PointT &point, int k, 
+       ^
+/usr/include/pcl-1.7/pcl/kdtree/kdtree_flann.h:161:7: note:   no known conversion for argument 3 from ‘int’ to ‘std::vector<int>&’
+In file included from /usr/include/pcl-1.7/pcl/kdtree/kdtree_flann.h:44:0,
+                 from /usr/include/pcl-1.7/pcl/search/kdtree.h:44,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:27:
+/usr/include/pcl-1.7/pcl/kdtree/kdtree.h:204:7: note: int pcl::KdTree<PointT>::nearestKSearch(int, int, std::vector<int>&, std::vector<float>&) const [with PointT = pcl::PointXYZ]
+       nearestKSearch (int index, int k, 
+       ^
+/usr/include/pcl-1.7/pcl/kdtree/kdtree.h:204:7: note:   no known conversion for argument 1 from ‘pcl::PointXYZ’ to ‘int’
+/usr/include/pcl-1.7/pcl/kdtree/kdtree.h:157:7: note: int pcl::KdTree<PointT>::nearestKSearch(const PointCloud&, int, int, std::vector<int>&, std::vector<float>&) const [with PointT = pcl::PointXYZ; pcl::KdTree<PointT>::PointCloud = pcl::PointCloud<pcl::PointXYZ>]
+       nearestKSearch (const PointCloud &cloud, int index, int k, 
+       ^
+/usr/include/pcl-1.7/pcl/kdtree/kdtree.h:157:7: note:   candidate expects 5 arguments, 4 provided
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:101:46: error: request for member ‘size’ in ‘pointIdxNKNSearch’, which is of non-class type ‘int’
+     for (size_t i = 0; i < pointIdxNKNSearch.size (); ++i)
+                                              ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:102:74: error: invalid types ‘int[std::size_t {aka long unsigned int}]’ for array subscript
+       std::cout << "    "  <<   Cloud_kinect->points[ pointIdxNKNSearch[i] ].x 
+                                                                          ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:103:68: error: invalid types ‘int[std::size_t {aka long unsigned int}]’ for array subscript
+                 << " " << Cloud_kinect->points[ pointIdxNKNSearch[i] ].y 
+                                                                    ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:68: error: invalid types ‘int[std::size_t {aka long unsigned int}]’ for array subscript
+                 << " " << Cloud_kinect->points[ pointIdxNKNSearch[i] ].z 
+                                                                    ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:105:71: error: invalid types ‘float[std::size_t {aka long unsigned int}]’ for array subscript
+                 << " (squared distance: " << pointNKNSquaredDistance[i] << ")" << std::endl;
+                                                                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:108:35: error: invalid types ‘float[int]’ for array subscript
+   dist = pointNKNSquaredDistance[0];
+                                   ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

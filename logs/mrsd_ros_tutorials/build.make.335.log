@@ -1,0 +1,49 @@
+[  5%] [34m[1mGenerating dynamic reconfigure files from config/box_tf_offsets.cfg: /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/include/mrsd_ros_tutorials/box_tf_offsetsConfig.h /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/lib/python2.7/dist-packages/mrsd_ros_tutorials/cfg/box_tf_offsetsConfig.py
+[0m[ 17%] [ 23%] Built target abstracted_class_node
+Built target in_source_node
+[ 29%] Built target kdtree_tutorial
+[ 29%] Built target sensor_msgs_generate_messages_lisp
+[ 35%] Built target linear_node
+Generating reconfiguration files for Transforms in mrsd_ros_tutorials
+[ 35%] Built target std_msgs_generate_messages_lisp
+Wrote header file in /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/include/mrsd_ros_tutorials/TransformsConfig.h
+[ 35%] Built target _mrsd_ros_tutorials_generate_messages_check_deps_SaveData
+[ 35%] Built target mrsd_ros_tutorials_gencfg
+[ 35%] Built target std_msgs_generate_messages_cpp
+[ 35%] Built target sensor_msgs_generate_messages_cpp
+[ 35%] Built target sensor_msgs_generate_messages_py
+[ 35%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target perception_data
+[ 35%] Built target _mrsd_ros_tutorials_generate_messages_check_deps_kinect_apriltag_sr
+[35m[1mScanning dependencies of target subscribe_pc_node
+[35m[1mScanning dependencies of target display_box_marker
+[ 41%] Built target pointcloud_transform_node
+[0m[0m[0m[ 47%] [ 58%] Built target mrsd_ros_tutorials_generate_messages_lisp
+[ 64%] [32mBuilding CXX object CMakeFiles/perception_data.dir/src/perception_data.cpp.o
+[ 70%] [0m[32mBuilding CXX object CMakeFiles/display_box_marker.dir/src/display_box_marker.cpp.o
+[0m[32mBuilding CXX object CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o
+[0m[ 82%] Built target mrsd_ros_tutorials_generate_messages_cpp
+[100%] Built target mrsd_ros_tutorials_generate_messages_py
+[100%] Built target mrsd_ros_tutorials_generate_messages
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:259:9: error: ‘transformed_pub’ was not declared in this scope
+         transformed_pub.publish(tr_ros_pc);
+         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:259:33: error: ‘tr_ros_pc’ was not declared in this scope
+         transformed_pub.publish(tr_ros_pc);
+                                 ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:205:16: error: redeclaration of ‘bool res’
+           bool res = client.call(transform_srv);
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:204:16: error: ‘bool res’ previously declared here
+           bool res = client.call(srv);
+                ^
+[31m[1mLinking CXX executable /home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/lib/mrsd_ros_tutorials/display_box_marker
+[0m[100%] Built target display_box_marker
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

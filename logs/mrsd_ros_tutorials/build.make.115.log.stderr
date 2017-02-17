@@ -1,0 +1,24 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void save_pcd(std::string, const pcl::PointCloud<pcl::PointXYZ>&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:32:32: error: ‘input_pc’ was not declared in this scope
+   writer.writeBinary(pc_name, *input_pc);
+                                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void segment_bin(const pcl::PointCloud<pcl::PointXYZ>&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:44:23: error: ‘xyz_pc_input’ was not declared in this scope
+   pass.setInputCloud (xyz_pc_input);
+                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:89:31: error: invalid initialization of reference of type ‘const pcl::PointCloud<pcl::PointXYZ>&’ from expression of type ‘sensor_msgs::PointCloud2’
+         segment_bin(ros_msg_pc);
+                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:39:6: error: in passing argument 1 of ‘void segment_bin(const pcl::PointCloud<pcl::PointXYZ>&)’
+ void segment_bin(const pcl::PointCloud<pcl::PointXYZ>& msg)
+      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:90:39: error: invalid initialization of reference of type ‘const pcl::PointCloud<pcl::PointXYZ>&’ from expression of type ‘sensor_msgs::PointCloud2’
+         save_pcd(item_name, ros_msg_pc);
+                                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:27:6: error: in passing argument 2 of ‘void save_pcd(std::string, const pcl::PointCloud<pcl::PointXYZ>&)’
+ void save_pcd(std::string pc_name, const pcl::PointCloud<pcl::PointXYZ>& msg)
+      ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

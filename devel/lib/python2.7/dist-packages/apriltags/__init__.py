@@ -1,0 +1,1 @@
+/home/jin/ros/apriltag_size/devel/.private/apriltags/lib/python2.7/dist-packages/apriltags/__init__.py

@@ -1,0 +1,27 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:82:32: error: invalid initialization of reference of type ‘const Ptr& {aka const boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >&}’ from expression of type ‘sensor_msgs::PointCloud2* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’
+         segment_bin(&ros_msg_pc);
+                                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:38:6: error: in passing argument 1 of ‘void segment_bin(const Ptr&)’
+ void segment_bin(const pcl::PointCloud<pcl::PointXYZ>::Ptr& xyz_pc_input)
+      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:83:42: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+         save_pcd(item_number, &ros_msg_pc);
+                                          ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /opt/ros/indigo/include/ros/platform.h:55,
+                 from /opt/ros/indigo/include/ros/time.h:53,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:3:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:83:42: error: invalid initialization of reference of type ‘const Ptr& {aka const boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> >&}’ from expression of type ‘sensor_msgs::PointCloud2* {aka sensor_msgs::PointCloud2_<std::allocator<void> >*}’
+         save_pcd(item_number, &ros_msg_pc);
+                                          ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:27:6: error: in passing argument 2 of ‘void save_pcd(std::string, const Ptr&)’
+ void save_pcd(std::string pc_name, const pcl::PointCloud<pcl::PointXYZRGB>::Ptr& input_pc)
+      ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

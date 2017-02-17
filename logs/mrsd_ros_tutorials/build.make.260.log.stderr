@@ -1,0 +1,117 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:77:22: error: expected ‘;’ at end of member declaration
+   ros::ServiceServer kinect_apriltag_sr
+                      ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In constructor ‘ImageConverter::ImageConverter()’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:89:95: error: no matching function for call to ‘image_transport::ImageTransport::subscribe(const char [22], int, void (ImageConverter::*)(tf::StampedTransform&), ImageConverter* const)’
+     apriltag_sub = it_.subscribe("/apriltags/detections", 1, &ImageConverter::apriltagCB, this);
+                                                                                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:89:95: note: candidates are:
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:4:0:
+/opt/ros/indigo/include/image_transport/image_transport.h:74:14: note: image_transport::Subscriber image_transport::ImageTransport::subscribe(const string&, uint32_t, const boost::function<void(const boost::shared_ptr<const sensor_msgs::Image_<std::allocator<void> > >&)>&, const VoidPtr&, const image_transport::TransportHints&)
+   Subscriber subscribe(const std::string& base_topic, uint32_t queue_size,
+              ^
+/opt/ros/indigo/include/image_transport/image_transport.h:74:14: note:   no known conversion for argument 4 from ‘ImageConverter* const’ to ‘const VoidPtr& {aka const boost::shared_ptr<void>&}’
+/opt/ros/indigo/include/image_transport/image_transport.h:82:14: note: image_transport::Subscriber image_transport::ImageTransport::subscribe(const string&, uint32_t, void (*)(const ImageConstPtr&), const image_transport::TransportHints&)
+   Subscriber subscribe(const std::string& base_topic, uint32_t queue_size,
+              ^
+/opt/ros/indigo/include/image_transport/image_transport.h:82:14: note:   no known conversion for argument 3 from ‘void (ImageConverter::*)(tf::StampedTransform&)’ to ‘void (*)(const ImageConstPtr&) {aka void (*)(const boost::shared_ptr<const sensor_msgs::Image_<std::allocator<void> > >&)}’
+/opt/ros/indigo/include/image_transport/image_transport.h:95:14: note: template<class T> image_transport::Subscriber image_transport::ImageTransport::subscribe(const string&, uint32_t, void (T::*)(const ImageConstPtr&), T*, const image_transport::TransportHints&)
+   Subscriber subscribe(const std::string& base_topic, uint32_t queue_size,
+              ^
+/opt/ros/indigo/include/image_transport/image_transport.h:95:14: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:89:95: note:   mismatched types ‘const ImageConstPtr& {aka const boost::shared_ptr<const sensor_msgs::Image_<std::allocator<void> > >&}’ and ‘tf::StampedTransform&’
+     apriltag_sub = it_.subscribe("/apriltags/detections", 1, &ImageConverter::apriltagCB, this);
+                                                                                               ^
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:4:0:
+/opt/ros/indigo/include/image_transport/image_transport.h:106:14: note: template<class T> image_transport::Subscriber image_transport::ImageTransport::subscribe(const string&, uint32_t, void (T::*)(const ImageConstPtr&), const boost::shared_ptr<X>&, const image_transport::TransportHints&)
+   Subscriber subscribe(const std::string& base_topic, uint32_t queue_size,
+              ^
+/opt/ros/indigo/include/image_transport/image_transport.h:106:14: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:89:95: note:   mismatched types ‘const ImageConstPtr& {aka const boost::shared_ptr<const sensor_msgs::Image_<std::allocator<void> > >&}’ and ‘tf::StampedTransform&’
+     apriltag_sub = it_.subscribe("/apriltags/detections", 1, &ImageConverter::apriltagCB, this);
+                                                                                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: error: no matching function for call to ‘ros::NodeHandle::advertiseService(const char [15], int (ImageConverter::*)(pcl::PointCloud<pcl::PointXYZ>::Ptr&), ImageConverter* const)’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note: candidates are:
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:878:17: note: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(MReq&, MRes&), T*)
+   ServiceServer advertiseService(const std::string& service, bool(T::*srv_func)(MReq &, MRes &), T *obj)
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:878:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   mismatched types ‘bool’ and ‘int’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:923:17: note: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(ros::ServiceEvent<MReq, MRes>&), T*)
+   ServiceServer advertiseService(const std::string& service, bool(T::*srv_func)(ServiceEvent<MReq, MRes>&), T *obj)
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:923:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   mismatched types ‘bool’ and ‘int’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:969:17: note: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(MReq&, MRes&), const boost::shared_ptr<X>&)
+   ServiceServer advertiseService(const std::string& service, bool(T::*srv_func)(MReq &, MRes &), const boost::shared_ptr<T>& obj)
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:969:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   mismatched types ‘bool’ and ‘int’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1016:17: note: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(ros::ServiceEvent<MReq, MRes>&), const boost::shared_ptr<X>&)
+   ServiceServer advertiseService(const std::string& service, bool(T::*srv_func)(ServiceEvent<MReq, MRes>&), const boost::shared_ptr<T>& obj)
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1016:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   mismatched types ‘bool’ and ‘int’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1060:17: note: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (*)(MReq&, MRes&))
+   ServiceServer advertiseService(const std::string& service, bool(*srv_func)(MReq&, MRes&))
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1060:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   mismatched types ‘bool (*)(MReq&, MRes&)’ and ‘int (ImageConverter::*)(pcl::PointCloud<pcl::PointXYZ>::Ptr&) {aka int (ImageConverter::*)(boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >&)}’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1103:17: note: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (*)(ros::ServiceEvent<MReq, MRes>&))
+   ServiceServer advertiseService(const std::string& service, bool(*srv_func)(ServiceEvent<MReq, MRes>&))
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1103:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   mismatched types ‘bool (*)(ros::ServiceEvent<MReq, MRes>&)’ and ‘int (ImageConverter::*)(pcl::PointCloud<pcl::PointXYZ>::Ptr&) {aka int (ImageConverter::*)(boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >&)}’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1144:17: note: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, const boost::function<bool(MReq&, MRes&)>&, const VoidConstPtr&)
+   ServiceServer advertiseService(const std::string& service, const boost::function<bool(MReq&, MRes&)>& callback, 
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1144:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   ‘int (ImageConverter::*)(pcl::PointCloud<pcl::PointXYZ>::Ptr&) {aka int (ImageConverter::*)(boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >&)}’ is not derived from ‘const boost::function<bool(MReq&, MRes&)>’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1189:17: note: template<class S> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, const boost::function<bool(S&)>&, const VoidConstPtr&)
+   ServiceServer advertiseService(const std::string& service, const boost::function<bool(S&)>& callback, 
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1189:17: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:98: note:   ‘int (ImageConverter::*)(pcl::PointCloud<pcl::PointXYZ>::Ptr&) {aka int (ImageConverter::*)(boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >&)}’ is not derived from ‘const boost::function<bool(S&)>’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                                                  ^
+In file included from /opt/ros/indigo/include/ros/ros.h:45:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/ros/node_handle.h:1221:17: note: ros::ServiceServer ros::NodeHandle::advertiseService(ros::AdvertiseServiceOptions&)
+   ServiceServer advertiseService(AdvertiseServiceOptions& ops);
+                 ^
+/opt/ros/indigo/include/ros/node_handle.h:1221:17: note:   candidate expects 1 argument, 3 provided
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,7 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In member function ‘bool ImageConverter::transformCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:186:5: error: ‘transformed_pub’ was not declared in this scope
+     transformed_pub.publish(tr_ros_pc);
+     ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make: *** [all] Error 2

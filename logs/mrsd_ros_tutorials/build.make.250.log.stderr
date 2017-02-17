@@ -1,0 +1,17 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:62:33: fatal error: apriltags/apriltags.h: No such file or directory
+ #include <apriltags/apriltags.h>
+                                 ^
+compilation terminated.
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int transform(pcl::PointCloud<pcl::PointXYZ>::Ptr&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:123:7: error: ‘listener’ was not declared in this scope
+       listener.lookupTransform("/turtle2", "/turtle1",
+       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:129:7: error: continue statement not within a loop
+       continue;
+       ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make: *** [all] Error 2

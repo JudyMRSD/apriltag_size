@@ -1,0 +1,2 @@
+set(mrsd_ros_tutorials_MESSAGE_FILES "")
+set(mrsd_ros_tutorials_SERVICE_FILES "/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/srv/SaveData.srv;/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/srv/kinect_apriltag_sr.srv")

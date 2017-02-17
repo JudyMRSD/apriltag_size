@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jin/ros/apriltag_size/src/urdf_tutorial/src/apriltag_kinect_tf.cpp
+ros/ros.h
+-
+ros/forwards.h
+-
+ros/single_subscriber_publisher.h
+-
+

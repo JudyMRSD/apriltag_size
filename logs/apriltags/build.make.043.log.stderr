@@ -1,0 +1,10 @@
+/home/jin/ros/apriltag_size/src/apriltags/src/apriltag_kinect_tf.cpp: In function ‘void chatterCallback(const ConstPtr&)’:
+/home/jin/ros/apriltag_size/src/apriltags/src/apriltag_kinect_tf.cpp:83:1: error: a function-definition is not allowed here before ‘{’ token
+ {
+ ^
+/home/jin/ros/apriltag_size/src/apriltags/src/apriltag_kinect_tf.cpp:95:1: error: expected ‘}’ at end of input
+ }
+ ^
+make[2]: *** [CMakeFiles/apriltag_kinect_tf.dir/src/apriltag_kinect_tf.cpp.o] Error 1
+make[1]: *** [CMakeFiles/apriltag_kinect_tf.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,22 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/transform_pc.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/transform_pc.cpp:125:46: error: no matching function for call to ‘pcl::visualization::PCLVisualizer::addCoordinateSystem(double, const char [6], int)’
+   viewer.addCoordinateSystem (1.0, "cloud", 0);
+                                              ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/transform_pc.cpp:125:46: note: candidates are:
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/transform_pc.cpp:8:0:
+/usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:281:9: note: void pcl::visualization::PCLVisualizer::addCoordinateSystem(double, int)
+         addCoordinateSystem (double scale = 1.0, int viewport = 0);
+         ^
+/usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:281:9: note:   candidate expects 2 arguments, 3 provided
+/usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:291:9: note: void pcl::visualization::PCLVisualizer::addCoordinateSystem(double, float, float, float, int)
+         addCoordinateSystem (double scale, float x, float y, float z, int viewport = 0);
+         ^
+/usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:291:9: note:   candidate expects 5 arguments, 3 provided
+/usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:325:9: note: void pcl::visualization::PCLVisualizer::addCoordinateSystem(double, const Affine3f&, int)
+         addCoordinateSystem (double scale, const Eigen::Affine3f& t, int viewport = 0);
+         ^
+/usr/include/pcl-1.7/pcl/visualization/pcl_visualizer.h:325:9: note:   no known conversion for argument 2 from ‘const char [6]’ to ‘const Affine3f& {aka const Eigen::Transform<float, 3, 2>&}’
+make[2]: *** [CMakeFiles/transform_pc.dir/src/transform_pc.cpp.o] Error 1
+make[1]: *** [CMakeFiles/transform_pc.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

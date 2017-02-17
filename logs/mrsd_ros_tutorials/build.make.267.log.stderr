@@ -1,0 +1,7 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In constructor ‘ImageConverter::ImageConverter()’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:90:65: error: ‘transformCB’ is not a member of ‘ImageConverter’
+     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
+                                                                 ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make: *** [all] Error 2

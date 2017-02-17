@@ -1,0 +1,6 @@
+/home/jin/ros/apriltag_size/build/apriltagscpp/src/CMakeFiles/apriltagscpp.dir
+/home/jin/ros/apriltag_size/build/apriltagscpp/src/CMakeFiles/camtest.dir
+/home/jin/ros/apriltag_size/build/apriltagscpp/src/CMakeFiles/gltest.dir
+/home/jin/ros/apriltag_size/build/apriltagscpp/src/CMakeFiles/maketags.dir
+/home/jin/ros/apriltag_size/build/apriltagscpp/src/CMakeFiles/quadtest.dir
+/home/jin/ros/apriltag_size/build/apriltagscpp/src/CMakeFiles/tagtest.dir

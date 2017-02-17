@@ -1,0 +1,12 @@
+CMakeFiles/apriltag_kinect_tf.dir/src/apriltag_kinect_tf.cpp.o: In function `main':
+apriltag_kinect_tf.cpp:(.text+0x61): undefined reference to `ros::init(int&, char**, std::string const&, unsigned int)'
+apriltag_kinect_tf.cpp:(.text+0xbd): undefined reference to `ros::NodeHandle::NodeHandle(std::string const&, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string> > > const&)'
+apriltag_kinect_tf.cpp:(.text+0xe0): undefined reference to `ros::spin()'
+apriltag_kinect_tf.cpp:(.text+0xf4): undefined reference to `ros::NodeHandle::~NodeHandle()'
+apriltag_kinect_tf.cpp:(.text+0x152): undefined reference to `ros::NodeHandle::~NodeHandle()'
+apriltag_kinect_tf.cpp:(.text+0x183): undefined reference to `ros::NodeHandle::~NodeHandle()'
+apriltag_kinect_tf.cpp:(.text+0x1a0): undefined reference to `ros::NodeHandle::~NodeHandle()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/jin/ros/apriltag_size/devel/.private/urdf_tutorial/lib/urdf_tutorial/apriltag_kinect_tf] Error 1
+make[1]: *** [CMakeFiles/apriltag_kinect_tf.dir/all] Error 2
+make: *** [all] Error 2

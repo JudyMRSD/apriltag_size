@@ -1,0 +1,13 @@
+/home/jin/ros/apriltag_size/src/urdf_tutorial/src/apriltag_kinect_tf.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/urdf_tutorial/src/apriltag_kinect_tf.cpp:12:37: error: ‘apriltags’ was not declared in this scope
+   ros::Subscriber sub = n.subscribe<apriltags::AprilTagDetections>("/apriltags/detections", 1, chatterCallback);
+                                     ^
+/home/jin/ros/apriltag_size/src/urdf_tutorial/src/apriltag_kinect_tf.cpp:12:27: error: parse error in template argument list
+   ros::Subscriber sub = n.subscribe<apriltags::AprilTagDetections>("/apriltags/detections", 1, chatterCallback);
+                           ^
+/home/jin/ros/apriltag_size/src/urdf_tutorial/src/apriltag_kinect_tf.cpp:12:96: error: ‘chatterCallback’ was not declared in this scope
+   ros::Subscriber sub = n.subscribe<apriltags::AprilTagDetections>("/apriltags/detections", 1, chatterCallback);
+                                                                                                ^
+make[2]: *** [CMakeFiles/apriltag_kinect_tf.dir/src/apriltag_kinect_tf.cpp.o] Error 1
+make[1]: *** [CMakeFiles/apriltag_kinect_tf.dir/all] Error 2
+make: *** [all] Error 2

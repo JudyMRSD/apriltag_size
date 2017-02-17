@@ -1,0 +1,10 @@
+/home/jin/ros/apriltag_size/src/apriltags-cpp/src/TagDetector.cpp: In member function ‘void TagDetector::getQuads_MZ(const TagDetector::Images&, QuadArray&) const’:
+/home/jin/ros/apriltag_size/src/apriltags-cpp/src/TagDetector.cpp:527:28: warning: name lookup of ‘i’ changed [enabled by default]
+       at::real ha = hareas[i];
+                            ^
+/home/jin/ros/apriltag_size/src/apriltags-cpp/src/TagDetector.cpp:499:15: warning:   matches this ‘i’ under ISO standard rules [enabled by default]
+   for (size_t i=0; i<hulls.size(); ++i) {
+               ^
+/home/jin/ros/apriltag_size/src/apriltags-cpp/src/TagDetector.cpp:515:14: warning:   matches this ‘i’ under old rules [enabled by default]
+     for (int i=0; i<4; ++i) {
+              ^

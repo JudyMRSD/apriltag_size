@@ -1,0 +1,1 @@
+/home/jin/ros/apriltag_size/devel/.private/mrsd_ros_tutorials/include/mrsd_ros_tutorials/kinect_apriltag_srRequest.h

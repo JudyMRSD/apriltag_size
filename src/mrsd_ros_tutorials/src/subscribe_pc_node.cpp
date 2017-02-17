@@ -223,7 +223,7 @@ public:
 
     std::string name;
     name = req.item_number;
-    name = "hard"+ name + ".jpg";
+    name = "tote"+ name + ".jpg";
     cv::imwrite(name, kinect_color_raw->image);
     ROS_INFO("[Perception] Save image file ");
 
@@ -231,6 +231,7 @@ public:
     pc_name = "hard_pc"+ pc_name +".pcd";
     std::cout <<"service address"<< kinect_color_pc<< std::endl;
     writer.writeBinary(pc_name, *kinect_color_pc);
+    std::cout <<"save PCD to"<< pc_name<< std::endl;
     ROS_INFO("[Perception] Save PCD file ");
 
     res.status = 1;

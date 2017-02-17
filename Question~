@@ -1,0 +1,30 @@
+roslaunch kinect2_bridge kinect2_bridge.launch
+roslaunch urdf_tutorial stl_display.launch
+rosrun mrsd_ros_tutorials subscribe_pc_node
+rosrun mrsd_ros_tutorials perception_data 
+
+-----------------
+todo
+pass.setFilterLimits (0.0, 1.0);
+try kdtree function see if the out put is reasonable 
+
+-------------------
+???need new operator?????
+pcl::PointCloud<pcl::PointXYZRGB>::Ptr xyz_pc_ptr;
+  xyz_pc_ptr = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
+
+?????
+
+subscribe_pc_node:
+
+//question: why need new
+    //question:: why cannot declare this in Class?
+
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_transformed (new pcl::PointCloud<pcl::PointXYZRGB>);
+
+
+
+?????????
+Why single file in morsd_ros_tutorial cannot run by itself?
+
+

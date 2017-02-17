@@ -1,0 +1,13 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:84:36: error: conflicting declaration ‘sensor_msgs::PointCloud2ConstPtr ros_msg_pc’
+   sensor_msgs::PointCloud2ConstPtr ros_msg_pc;
+                                    ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:83:28: error: ‘ros_msg_pc’ has a previous declaration as ‘sensor_msgs::PointCloud2 ros_msg_pc’
+   sensor_msgs::PointCloud2 ros_msg_pc;
+                            ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:104:9: error: ‘ros_msg_ptr’ was not declared in this scope
+         ros_msg_ptr = &srv.response.point_cloud;
+         ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

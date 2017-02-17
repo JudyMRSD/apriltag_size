@@ -1,0 +1,1289 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:74:61: error: expected identifier before ‘new’
+   pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_transformed (new pcl::PointCloud<pcl::PointXYZRGB>);
+                                                             ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:74:61: error: expected ‘,’ or ‘...’ before ‘new’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In member function ‘bool ImageConverter::transformCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:14: error: no match for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘<unresolved overloaded function type>’)
+     std::cout<<cloud_transformed<<std::endl;
+              ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:14: note: candidates are:
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:108:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^
+/usr/include/c++/4.8/ostream:108:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/4.8/ostream:117:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^
+/usr/include/c++/4.8/ostream:117:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/4.8/ostream:127:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^
+/usr/include/c++/4.8/ostream:127:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/4.8/ostream:166:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^
+/usr/include/c++/4.8/ostream:166:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long int’
+/usr/include/c++/4.8/ostream:170:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^
+/usr/include/c++/4.8/ostream:170:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long unsigned int’
+/usr/include/c++/4.8/ostream:174:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/4.8/ostream:174:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘bool’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘short int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:181:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^
+/usr/include/c++/4.8/ostream:181:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘short unsigned int’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘int’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:192:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^
+/usr/include/c++/4.8/ostream:192:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘unsigned int’
+/usr/include/c++/4.8/ostream:201:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^
+/usr/include/c++/4.8/ostream:201:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long long int’
+/usr/include/c++/4.8/ostream:205:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^
+/usr/include/c++/4.8/ostream:205:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long long unsigned int’
+/usr/include/c++/4.8/ostream:220:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^
+/usr/include/c++/4.8/ostream:220:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘double’
+/usr/include/c++/4.8/ostream:224:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^
+/usr/include/c++/4.8/ostream:224:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘float’
+/usr/include/c++/4.8/ostream:232:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^
+/usr/include/c++/4.8/ostream:232:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long double’
+/usr/include/c++/4.8/ostream:245:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+/usr/include/c++/4.8/ostream:245:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const void*’
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /opt/ros/indigo/include/ros/node_handle.h:51:0,
+                 from /opt/ros/indigo/include/ros/ros.h:45,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/opt/ros/indigo/include/XmlRpcValue.h:192:15: note: std::ostream& operator<<(std::ostream&, XmlRpc::XmlRpcValue&)
+ std::ostream& operator<<(std::ostream& os, XmlRpc::XmlRpcValue& v);
+               ^
+/opt/ros/indigo/include/XmlRpcValue.h:192:15: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘XmlRpc::XmlRpcValue&’
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/valarray:1175:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const _Tp&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+ ^
+/usr/include/c++/4.8/valarray:1175:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::valarray<_Tp>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/valarray:1175:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const _Tp&)
+ _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+ ^
+/usr/include/c++/4.8/valarray:1175:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/opencv2/contrib/retina.hpp:76:0,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/valarray:1175:1: note: template<class _Tp> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__shift_left, _Tp>::result_type> std::operator<<(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(<<, __shift_left)
+ ^
+/usr/include/c++/4.8/valarray:1175:1: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<_Tp>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::valarray<typename _Dom::value_type>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note: template<class _Dom> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/valarray:587:0,
+                 from /usr/include/opencv2/contrib/retina.hpp:76,
+                 from /usr/include/opencv2/contrib/contrib.hpp:979,
+                 from /usr/include/opencv2/opencv.hpp:59,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:17:
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__shift_left, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__shift_left, typename _Dom1::value_type>::result_type> std::operator<<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<<, __shift_left)
+     ^
+/usr/include/c++/4.8/bits/valarray_after.h:410:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘std::ostream {aka std::basic_ostream<char>}’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/pcl-1.7/pcl/point_types.h:43:0,
+                 from /usr/include/pcl-1.7/pcl/common/impl/io.hpp:45,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:487,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/c++/4.8/bitset:1521:5: note: template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bitset<_Nb>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bitset:1521:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::bitset<_Nb>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/memory:82:0,
+                 from /usr/include/boost/config/no_tr1/memory.hpp:21,
+                 from /usr/include/boost/smart_ptr/shared_ptr.hpp:27,
+                 from /usr/include/boost/shared_ptr.hpp:17,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/shared_ptr.h:66:5: note: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+     ^
+/usr/include/c++/4.8/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:15,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/complex:524:5: note: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+     ^
+/usr/include/c++/4.8/complex:524:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::complex<_Tp>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/math/policies/error_handling.hpp:12:0,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/iomanip:308:5: note: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     ^
+/usr/include/c++/4.8/iomanip:308:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘std::_Put_money<_MoneyT>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/math/policies/error_handling.hpp:12:0,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/iomanip:235:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^
+/usr/include/c++/4.8/iomanip:235:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setw’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/boost/math/policies/error_handling.hpp:12:0,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/iomanip:205:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^
+/usr/include/c++/4.8/iomanip:205:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setprecision’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/boost/math/policies/error_handling.hpp:12:0,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/iomanip:175:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^
+/usr/include/c++/4.8/iomanip:175:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘std::_Setfill<_CharT>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/math/policies/error_handling.hpp:12:0,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/iomanip:140:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^
+/usr/include/c++/4.8/iomanip:140:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setbase’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/boost/math/policies/error_handling.hpp:12:0,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/iomanip:106:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^
+/usr/include/c++/4.8/iomanip:106:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setiosflags’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/boost/math/policies/error_handling.hpp:12:0,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/iomanip:76:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^
+/usr/include/c++/4.8/iomanip:76:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Resetiosflags’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:3312:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_linear_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:3312:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::piecewise_linear_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:3096:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::piecewise_constant_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:3096:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::piecewise_constant_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2886:5: note: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discrete_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2886:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::discrete_distribution<_IntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2427:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::student_t_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2427:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::student_t_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2352:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::fisher_f_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2352:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::fisher_f_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2188:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::chi_squared_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2188:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::chi_squared_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2115:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::lognormal_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2115:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::lognormal_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1819:5: note: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::binomial_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1819:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::binomial_distribution<_IntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1552:5: note: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::poisson_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1552:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::poisson_distribution<_IntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1347:5: note: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::negative_binomial_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1347:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::negative_binomial_distribution<_IntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:831:5: note: template<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::shuffle_order_engine<_RandomNumberEngine, __k>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:831:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::shuffle_order_engine<_RandomNumberEngine, __k>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:702:5: note: template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::discard_block_engine<_RandomNumberEngine, __p, __r>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:702:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::discard_block_engine<_RandomNumberEngine, __p, __r>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:632:5: note: template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:632:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:156:5: note: template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::linear_congruential_engine<_UIntType, __a, __c, __m>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:156:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::linear_congruential_engine<_UIntType, __a, __c, __m>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2750:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::extreme_value_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2750:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::extreme_value_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2674:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::weibull_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2674:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::weibull_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1883:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::exponential_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1883:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::exponential_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2596:5: note: template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::gamma_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2596:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::gamma_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1232:5: note: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::geometric_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1232:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::geometric_distribution<_IntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2050:5: note: template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::normal_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2050:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::normal_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1150:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::bernoulli_distribution&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1150:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘const std::bernoulli_distribution&’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:2275:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::cauchy_distribution<_RealType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:2275:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::cauchy_distribution<_RealType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1088:5: note: template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_real_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1088:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::uniform_real_distribution<_IntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:1029:5: note: template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::uniform_int_distribution<_IntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:1029:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::uniform_int_distribution<_IntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:52:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.tcc:477:5: note: template<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.tcc:477:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/random:50:0,
+                 from /usr/include/c++/4.8/bits/stl_algo.h:65,
+                 from /usr/include/c++/4.8/algorithm:62,
+                 from /usr/include/boost/math/tools/config.hpp:16,
+                 from /usr/include/boost/math/special_functions/round.hpp:13,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/random.h:1277:5: note: template<class _RandomNumberEngine, long unsigned int __w, class _UIntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)
+     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/random.h:1277:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:602:5: note: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)]
+     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
+     ^
+/usr/include/c++/4.8/ostream:602:5: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::* const&)(int)’
+/usr/include/c++/4.8/ostream:548:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/4.8/ostream:548:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘const unsigned char*’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:543:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/4.8/ostream:543:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘const signed char*’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:530:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/ostream:530:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘const char*’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/ostream:612:0,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/4.8/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘const char*’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:513:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/4.8/ostream:513:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   mismatched types ‘const _CharT*’ and ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:493:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/4.8/ostream:493:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘unsigned char’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:488:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/4.8/ostream:488:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘signed char’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:482:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:482:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘char’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:476:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/4.8/ostream:476:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘char’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/iostream:39:0,
+                 from /opt/ros/indigo/include/ros/time.h:54,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/ostream:471:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/4.8/ostream:471:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from /opt/ros/indigo/include/ros/platform.h:55,
+                 from /opt/ros/indigo/include/ros/time.h:53,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/4.8/bits/basic_string.h:2753:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const std::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/variant/variant.hpp:2416:0,
+                 from /usr/include/boost/signals2/slot_base.hpp:23,
+                 from /usr/include/boost/signals2/detail/tracked_objects_visitor.hpp:18,
+                 from /usr/include/boost/signals2/slot.hpp:22,
+                 from /usr/include/boost/signals2/connection.hpp:23,
+                 from /usr/include/boost/signals2/signal.hpp:21,
+                 from /usr/include/boost/signals2.hpp:19,
+                 from /usr/include/pcl-1.7/pcl/io/boost.h:75,
+                 from /usr/include/pcl-1.7/pcl/io/file_io.h:43,
+                 from /usr/include/pcl-1.7/pcl/io/pcd_io.h:44,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:12:
+/usr/include/boost/variant/detail/variant_io.hpp:79:46: note: template<class E, class T, class U0, class U1, class U2, class U3, class U4, class U5, class U6, class U7, class U8, class U9, class U10, class U11, class U12, class U13, class U14, class U15, class U16, class U17, class U18, class U19> std::basic_ostream<_CharT, _Traits>& boost::operator<<(std::basic_ostream<_CharT, _Traits>&, const boost::variant<U0, U1, U2, U3, U4, U5, U6, U7, U8, U9, U10, U11, U12, U13, U14, U15, U16, U17, U18, U19>&)
+ inline BOOST_TEMPLATED_STREAM(ostream, E,T)& operator<<(
+                                              ^
+/usr/include/boost/variant/detail/variant_io.hpp:79:46: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const boost::variant<U0, U1, U2, U3, U4, U5, U6, U7, U8, U9, U10, U11, U12, U13, U14, U15, U16, U17, U18, U19>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/variant/variant.hpp:42:0,
+                 from /usr/include/boost/signals2/slot_base.hpp:23,
+                 from /usr/include/boost/signals2/detail/tracked_objects_visitor.hpp:18,
+                 from /usr/include/boost/signals2/slot.hpp:22,
+                 from /usr/include/boost/signals2/connection.hpp:23,
+                 from /usr/include/boost/signals2/signal.hpp:21,
+                 from /usr/include/boost/signals2.hpp:19,
+                 from /usr/include/pcl-1.7/pcl/io/boost.h:75,
+                 from /usr/include/pcl-1.7/pcl/io/file_io.h:43,
+                 from /usr/include/pcl-1.7/pcl/io/pcd_io.h:44,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:12:
+/usr/include/boost/blank.hpp:93:46: note: template<class E, class T> std::basic_ostream<_CharT, _Traits>& boost::operator<<(std::basic_ostream<_CharT, _Traits>&, const boost::blank&)
+ inline BOOST_TEMPLATED_STREAM(ostream, E,T)& operator<<(
+                                              ^
+/usr/include/boost/blank.hpp:93:46: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘const boost::blank&’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/boost/exception/detail/exception_ptr.hpp:20:0,
+                 from /usr/include/boost/exception_ptr.hpp:9,
+                 from /usr/include/boost/thread/future.hpp:28,
+                 from /usr/include/boost/thread.hpp:24,
+                 from /usr/include/pcl-1.7/pcl/io/boost.h:50,
+                 from /usr/include/pcl-1.7/pcl/io/file_io.h:43,
+                 from /usr/include/pcl-1.7/pcl/io/pcd_io.h:44,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:12:
+/usr/include/boost/exception/info.hpp:189:5: note: template<class E, class Tag, class T> typename boost::enable_if<boost::exception_detail::derives_boost_exception<E>, const E&>::type boost::operator<<(const E&, const boost::error_info<Tag, T>&)
+     operator<<( E const & x, error_info<Tag,T> const & v )
+     ^
+/usr/include/boost/exception/info.hpp:189:5: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const boost::error_info<Tag, T>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/range/iterator_range.hpp:14:0,
+                 from /usr/include/boost/algorithm/string/replace.hpp:16,
+                 from /usr/include/boost/units/detail/utility.hpp:25,
+                 from /usr/include/boost/exception/detail/type_info.hpp:19,
+                 from /usr/include/boost/exception/detail/object_hex_dump.hpp:15,
+                 from /usr/include/boost/exception/to_string_stub.hpp:16,
+                 from /usr/include/boost/exception/info.hpp:16,
+                 from /usr/include/boost/exception/detail/exception_ptr.hpp:20,
+                 from /usr/include/boost/exception_ptr.hpp:9,
+                 from /usr/include/boost/thread/future.hpp:28,
+                 from /usr/include/boost/thread.hpp:24,
+                 from /usr/include/pcl-1.7/pcl/io/boost.h:50,
+                 from /usr/include/pcl-1.7/pcl/io/file_io.h:43,
+                 from /usr/include/pcl-1.7/pcl/io/pcd_io.h:44,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:12:
+/usr/include/boost/range/iterator_range_io.hpp:55:49: note: template<class IteratorT, class Elem, class Traits> std::basic_ostream<_CharT, _Traits>& boost::operator<<(std::basic_ostream<_CharT, _Traits>&, const boost::iterator_range<IteratorT>&)
+         inline std::basic_ostream<Elem,Traits>& operator<<( 
+                                                 ^
+/usr/include/boost/range/iterator_range_io.hpp:55:49: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const boost::iterator_range<IteratorT>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/thread/thread_only.hpp:22:0,
+                 from /usr/include/boost/thread/thread.hpp:12,
+                 from /usr/include/boost/thread.hpp:13,
+                 from /usr/include/pcl-1.7/pcl/io/boost.h:50,
+                 from /usr/include/pcl-1.7/pcl/io/file_io.h:43,
+                 from /usr/include/pcl-1.7/pcl/io/pcd_io.h:44,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:12:
+/usr/include/boost/thread/detail/thread.hpp:693:9: note: template<class charT, class traits> std::basic_ostream<_CharT, _Traits>& boost::operator<<(std::basic_ostream<_CharT, _Traits>&, const boost::thread::id&)
+         operator<<(std::basic_ostream<charT, traits>& os, const id& x)
+         ^
+/usr/include/boost/thread/detail/thread.hpp:693:9: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’ (type ‘<unresolved overloaded function type>’) to type ‘const boost::thread::id&’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+In file included from /usr/include/boost/format.hpp:53:0,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/boost/format/free_funcs.hpp:33:9: note: template<class Ch, class Tr, class Alloc> std::basic_ostream<_CharT, _Traits>& boost::operator<<(std::basic_ostream<_CharT, _Traits>&, const boost::basic_format<Ch, Tr, Alloc>&)
+         operator<<( std::basic_ostream<Ch, Tr> & os,
+         ^
+/usr/include/boost/format/free_funcs.hpp:33:9: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const boost::basic_format<Ch, Tr, Alloc>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/boost/shared_ptr.hpp:17:0,
+                 from /usr/include/boost/format/alt_sstream.hpp:21,
+                 from /usr/include/boost/format/internals.hpp:23,
+                 from /usr/include/boost/format.hpp:38,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/indigo/include/ros/time.h:58,
+                 from /opt/ros/indigo/include/ros/ros.h:38,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:3:
+/usr/include/boost/smart_ptr/shared_ptr.hpp:857:64: note: template<class E, class T, class Y> std::basic_ostream<_CharT, _Traits>& boost::operator<<(std::basic_ostream<_CharT, _Traits>&, const boost::shared_ptr<Y>&)
+ template<class E, class T, class Y> std::basic_ostream<E, T> & operator<< (std::basic_ostream<E, T> & os, shared_ptr<Y> const & p)
+                                                                ^
+/usr/include/boost/smart_ptr/shared_ptr.hpp:857:64: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const boost::shared_ptr<Y>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/pcl-1.7/pcl/cloud_iterator.h:44:0,
+                 from /usr/include/pcl-1.7/pcl/common/centroid.h:45,
+                 from /usr/include/pcl-1.7/pcl/common/transforms.h:44,
+                 from /opt/ros/indigo/include/pcl_ros/transforms.h:41,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:15:
+/usr/include/pcl-1.7/pcl/correspondence.h:90:29: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Correspondence&)
+   PCL_EXPORTS std::ostream& operator << (std::ostream& os, const Correspondence& c);
+                             ^
+/usr/include/pcl-1.7/pcl/correspondence.h:90:29: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Correspondence&’
+In file included from /opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:67:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:13:
+/usr/include/pcl-1.7/pcl/PolygonMesh.h:35:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PolygonMesh&)
+   inline std::ostream& operator<<(std::ostream& s, const  ::pcl::PolygonMesh &v)
+                        ^
+/usr/include/pcl-1.7/pcl/PolygonMesh.h:35:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PolygonMesh&’
+In file included from /opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:64:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:13:
+/usr/include/pcl-1.7/pcl/Vertices.h:29:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Vertices&)
+   inline std::ostream& operator<<(std::ostream& s, const  ::pcl::Vertices & v)
+                        ^
+/usr/include/pcl-1.7/pcl/Vertices.h:29:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Vertices&’
+In file included from /opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:61:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:13:
+/usr/include/pcl-1.7/pcl/ModelCoefficients.h:30:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::ModelCoefficients&)
+   inline std::ostream& operator<<(std::ostream& s, const  ::pcl::ModelCoefficients & v)
+                        ^
+/usr/include/pcl-1.7/pcl/ModelCoefficients.h:30:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::ModelCoefficients&’
+In file included from /usr/include/pcl-1.7/pcl/point_types.h:311:0,
+                 from /usr/include/pcl-1.7/pcl/common/impl/io.hpp:45,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:487,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1484:3: note: template<int N> std::ostream& pcl::operator<<(std::ostream&, const pcl::Histogram<N>&)
+   operator << (std::ostream& os, const Histogram<N>& p)
+   ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1484:3: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const pcl::Histogram<N>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/pcl-1.7/pcl/point_types.h:311:0,
+                 from /usr/include/pcl-1.7/pcl/common/impl/io.hpp:45,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:487,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1480:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointSurfel&)
+     friend std::ostream& operator << (std::ostream& os, const PointSurfel& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1480:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointSurfel&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1422:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointWithScale&)
+     friend std::ostream& operator << (std::ostream& os, const PointWithScale& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1422:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointWithScale&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1340:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::IntensityGradient&)
+     friend std::ostream& operator << (std::ostream& os, const IntensityGradient& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1340:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::IntensityGradient&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1319:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::BorderDescription&)
+     friend std::ostream& operator << (std::ostream& os, const BorderDescription& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1319:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::BorderDescription&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1306:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Narf36&)
+     friend std::ostream& operator << (std::ostream& os, const Narf36& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1306:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Narf36&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1294:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::GFPFHSignature16&)
+     friend std::ostream& operator << (std::ostream& os, const GFPFHSignature16& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1294:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::GFPFHSignature16&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1282:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::ESFSignature640&)
+     friend std::ostream& operator << (std::ostream& os, const ESFSignature640& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1282:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::ESFSignature640&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1271:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::VFHSignature308&)
+     friend std::ostream& operator << (std::ostream& os, const VFHSignature308& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1271:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::VFHSignature308&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1260:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::FPFHSignature33&)
+     friend std::ostream& operator << (std::ostream& os, const FPFHSignature33& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1260:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::FPFHSignature33&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1247:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::ReferenceFrame&)
+     friend std::ostream& operator << (std::ostream& os, const ReferenceFrame& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1247:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::ReferenceFrame&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1200:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::SHOT1344&)
+     friend std::ostream& operator << (std::ostream& os, const SHOT1344& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1200:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::SHOT1344&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1187:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::SHOT352&)
+     friend std::ostream& operator << (std::ostream& os, const SHOT352& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1187:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::SHOT352&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1174:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::ShapeContext1980&)
+     friend std::ostream& operator << (std::ostream& os, const ShapeContext1980& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1174:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::ShapeContext1980&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1162:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::NormalBasedSignature12&)
+     friend std::ostream& operator << (std::ostream& os, const NormalBasedSignature12& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1162:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::NormalBasedSignature12&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1150:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PPFRGBSignature&)
+     friend std::ostream& operator << (std::ostream& os, const PPFRGBSignature& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1150:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PPFRGBSignature&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1137:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PPFSignature&)
+     friend std::ostream& operator << (std::ostream& os, const PPFSignature& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1137:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PPFSignature&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1125:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PFHRGBSignature250&)
+     friend std::ostream& operator << (std::ostream& os, const PFHRGBSignature250& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1125:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PFHRGBSignature250&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1114:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PFHSignature125&)
+     friend std::ostream& operator << (std::ostream& os, const PFHSignature125& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1114:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PFHSignature125&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1103:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PrincipalCurvatures&)
+     friend std::ostream& operator << (std::ostream& os, const PrincipalCurvatures& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1103:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PrincipalCurvatures&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1081:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Boundary&)
+     friend std::ostream& operator << (std::ostream& os, const Boundary& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1081:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Boundary&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1070:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PrincipalRadiiRSD&)
+     friend std::ostream& operator << (std::ostream& os, const PrincipalRadiiRSD& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1070:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PrincipalRadiiRSD&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1059:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::MomentInvariants&)
+     friend std::ostream& operator << (std::ostream& os, const MomentInvariants& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1059:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::MomentInvariants&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1048:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointWithViewpoint&)
+     friend std::ostream& operator << (std::ostream& os, const PointWithViewpoint& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1048:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointWithViewpoint&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1008:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointWithRange&)
+     friend std::ostream& operator << (std::ostream& os, const PointWithRange& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:1008:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointWithRange&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:971:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZINormal&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZINormal& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:971:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZINormal&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:930:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGBNormal&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZRGBNormal& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:930:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZRGBNormal&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:838:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointNormal&)
+     friend std::ostream& operator << (std::ostream& os, const PointNormal& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:838:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointNormal&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:798:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Axis&)
+     friend std::ostream& operator << (std::ostream& os, const Axis& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:798:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Axis&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:764:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Normal&)
+     friend std::ostream& operator << (std::ostream& os, const Normal& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:764:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Normal&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:721:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::InterestPoint&)
+     friend std::ostream& operator << (std::ostream& os, const InterestPoint& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:721:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::InterestPoint&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:701:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointUV&)
+     friend std::ostream& operator << (std::ostream& os, const PointUV& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:701:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointUV&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:688:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXY&)
+     friend std::ostream& operator << (std::ostream& os, const PointXY& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:688:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXY&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:673:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZHSV&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZHSV& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:673:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZHSV&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:629:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGBL&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZRGBL& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:629:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZRGBL&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:595:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGB&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZRGB& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:595:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZRGB&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:508:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZRGBA&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZRGBA& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:508:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZRGBA&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:451:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Label&)
+     friend std::ostream& operator << (std::ostream& os, const Label& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:451:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Label&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:442:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZL&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZL& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:442:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZL&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:415:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZI&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZI& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:415:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZI&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:374:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Intensity32u&)
+     friend std::ostream& operator << (std::ostream& os, const Intensity32u& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:374:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Intensity32u&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:349:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Intensity8u&)
+     friend std::ostream& operator << (std::ostream& os, const Intensity8u& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:349:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Intensity8u&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:323:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::Intensity&)
+     friend std::ostream& operator << (std::ostream& os, const Intensity& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:323:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::Intensity&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:297:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::RGB&)
+     friend std::ostream& operator << (std::ostream& os, const RGB& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:297:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::RGB&’
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:252:26: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointXYZ&)
+     friend std::ostream& operator << (std::ostream& os, const PointXYZ& p);
+                          ^
+/usr/include/pcl-1.7/pcl/impl/point_types.hpp:252:26: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointXYZ&’
+In file included from /usr/include/pcl-1.7/pcl/conversions.h:49:0,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:47,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/PCLImage.h:40:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PCLImage&)
+   inline std::ostream& operator<<(std::ostream& s, const  ::pcl::PCLImage & v)
+                        ^
+/usr/include/pcl-1.7/pcl/PCLImage.h:40:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PCLImage&’
+In file included from /usr/include/pcl-1.7/pcl/pcl_base.h:55:0,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:45,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/PCLPointCloud2.h:58:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PCLPointCloud2&)
+   inline std::ostream& operator<<(std::ostream& s, const  ::pcl::PCLPointCloud2 &v)
+                        ^
+/usr/include/pcl-1.7/pcl/PCLPointCloud2.h:58:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PCLPointCloud2&’
+In file included from /usr/include/pcl-1.7/pcl/pcl_base.h:54:0,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:45,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/PointIndices.h:29:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PointIndices&)
+   inline std::ostream& operator << (std::ostream& s, const ::pcl::PointIndices &v)
+                        ^
+/usr/include/pcl-1.7/pcl/PointIndices.h:29:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PointIndices&’
+In file included from /usr/include/pcl-1.7/pcl/pcl_base.h:53:0,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:45,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/point_cloud.h:602:3: note: template<class PointT> std::ostream& pcl::operator<<(std::ostream&, const pcl::PointCloud<PointT>&)
+   operator << (std::ostream& s, const pcl::PointCloud<PointT> &p)
+   ^
+/usr/include/pcl-1.7/pcl/point_cloud.h:602:3: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   ‘pcl::PointCloud<pcl::PointXYZRGB>::Ptr (ImageConverter::*)(int) {aka boost::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB> > (ImageConverter::*)(int)}’ is not derived from ‘const pcl::PointCloud<PointT>’
+     std::cout<<cloud_transformed<<std::endl;
+                ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:166:16: note:   could not resolve address from overloaded function ‘((ImageConverter*)this)->ImageConverter::cloud_transformed’
+In file included from /usr/include/pcl-1.7/pcl/point_traits.h:48:0,
+                 from /usr/include/pcl-1.7/pcl/point_cloud.h:50,
+                 from /usr/include/pcl-1.7/pcl/pcl_base.h:53,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:45,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/PCLPointField.h:44:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PCLPointField&)
+   inline std::ostream& operator<<(std::ostream& s, const  ::pcl::PCLPointField & v)
+                        ^
+/usr/include/pcl-1.7/pcl/PCLPointField.h:44:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PCLPointField&’
+In file included from /usr/include/pcl-1.7/pcl/point_cloud.h:48:0,
+                 from /usr/include/pcl-1.7/pcl/pcl_base.h:53,
+                 from /usr/include/pcl-1.7/pcl/common/io.h:45,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:11:
+/usr/include/pcl-1.7/pcl/PCLHeader.h:33:24: note: std::ostream& pcl::operator<<(std::ostream&, const pcl::PCLHeader&)
+   inline std::ostream& operator << (std::ostream& out, const PCLHeader &h)
+                        ^
+/usr/include/pcl-1.7/pcl/PCLHeader.h:33:24: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const pcl::PCLHeader&’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:167:62: error: invalid use of member function (did you forget the ‘()’ ?)
+     pcl_ros::transformPointCloud ("world", *kinect_color_pc,*cloud_transformed, tf_listener);
+                                                              ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:172:20: error: invalid use of member function (did you forget the ‘()’ ?)
+     pcl::toROSMsg(*cloud_transformed, tr_ros_pc);
+                    ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,43 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In member function ‘bool ImageConverter::saveDataCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:103:9: error: ‘mrsd_ros_tutorials::SaveData::Response’ has no member named ‘point_cloud’
+     res.point_cloud = kinect_color_pc;
+         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void segment_bin(const PCLPointCloud2Ptr&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:42:31: error: no matching function for call to ‘pcl::PassThrough<pcl::PointXYZ>::setInputCloud(const PCLPointCloud2Ptr&)’
+   pass.setInputCloud (input_pc);
+                               ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:42:31: note: candidate is:
+In file included from /usr/include/pcl-1.7/pcl/common/io.h:45:0,
+                 from /usr/include/pcl-1.7/pcl/io/io.h:43,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:11:
+/usr/include/pcl-1.7/pcl/pcl_base.h:95:7: note: void pcl::PCLBase<PointT>::setInputCloud(const PointCloudConstPtr&) [with PointT = pcl::PointXYZ; pcl::PCLBase<PointT>::PointCloudConstPtr = boost::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >]
+       setInputCloud (const PointCloudConstPtr &cloud);
+       ^
+/usr/include/pcl-1.7/pcl/pcl_base.h:95:7: note:   no known conversion for argument 1 from ‘const PCLPointCloud2Ptr {aka const boost::shared_ptr<pcl::PCLPointCloud2>}’ to ‘const PointCloudConstPtr& {aka const boost::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&}’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:25: error: no matching function for call to ‘pcl::PassThrough<pcl::PointXYZ>::filter(pcl::PCLPointCloud2&)’
+   pass.filter (*input_pc);
+                         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:46:25: note: candidates are:
+In file included from /usr/include/pcl-1.7/pcl/filters/passthrough.h:43:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:24:
+/usr/include/pcl-1.7/pcl/filters/filter_indices.h:103:7: note: void pcl::FilterIndices<PointT>::filter(pcl::FilterIndices<PointT>::PointCloud&) [with PointT = pcl::PointXYZ; pcl::FilterIndices<PointT>::PointCloud = pcl::PointCloud<pcl::PointXYZ>]
+       filter (PointCloud &output)
+       ^
+/usr/include/pcl-1.7/pcl/filters/filter_indices.h:103:7: note:   no known conversion for argument 1 from ‘pcl::PCLPointCloud2’ to ‘pcl::FilterIndices<pcl::PointXYZ>::PointCloud& {aka pcl::PointCloud<pcl::PointXYZ>&}’
+/usr/include/pcl-1.7/pcl/filters/filter_indices.h:112:7: note: void pcl::FilterIndices<PointT>::filter(std::vector<int>&) [with PointT = pcl::PointXYZ]
+       filter (std::vector<int> &indices)
+       ^
+/usr/include/pcl-1.7/pcl/filters/filter_indices.h:112:7: note:   no known conversion for argument 1 from ‘pcl::PCLPointCloud2’ to ‘std::vector<int>&’
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:71:9: error: ‘kinect_color_pc’ was not declared in this scope
+         kinect_color_pc = srv.response.point_cloud;
+         ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:71:40: error: ‘mrsd_ros_tutorials::SaveData::Response’ has no member named ‘point_cloud’
+         kinect_color_pc = srv.response.point_cloud;
+                                        ^
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

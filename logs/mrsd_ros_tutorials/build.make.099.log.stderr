@@ -1,0 +1,51 @@
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp: In member function ‘bool ImageConverter::saveDataCB(mrsd_ros_tutorials::SaveData::Request&, mrsd_ros_tutorials::SaveData::Response&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:118:44: error: no matching function for call to ‘toROSMsg(pcl::PointCloud<pcl::PointXYZRGB>&, pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > >&)’
+     pcl::toROSMsg(*kinect_color_pc, *ros_pc);
+                                            ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:118:44: note: candidates are:
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:13:0:
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:487:8: note: void pcl::toROSMsg(const PointCloud2&, sensor_msgs::Image&)
+   void toROSMsg(const sensor_msgs::PointCloud2 &cloud, sensor_msgs::Image &image)
+        ^
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:487:8: note:   no known conversion for argument 1 from ‘pcl::PointCloud<pcl::PointXYZRGB>’ to ‘const PointCloud2& {aka const sensor_msgs::PointCloud2_<std::allocator<void> >&}’
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:507:3: note: template<class T> void pcl::toROSMsg(const pcl::PointCloud<PointT>&, sensor_msgs::Image&)
+   toROSMsg (const pcl::PointCloud<T> &cloud, sensor_msgs::Image& msg)
+   ^
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:507:3: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:118:44: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::ros_pc.boost::shared_ptr<T>::operator*<pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > > >()’ (type ‘pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > >’) to type ‘sensor_msgs::Image& {aka sensor_msgs::Image_<std::allocator<void> >&}’
+     pcl::toROSMsg(*kinect_color_pc, *ros_pc);
+                                            ^
+In file included from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:13:0:
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:539:8: note: template<class T> void pcl::toROSMsg(const pcl::PointCloud<PointT>&, sensor_msgs::PointCloud2&)
+   void toROSMsg(const pcl::PointCloud<T> &pcl_cloud, sensor_msgs::PointCloud2 &cloud)
+        ^
+/opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:539:8: note:   template argument deduction/substitution failed:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:118:44: note:   cannot convert ‘((ImageConverter*)this)->ImageConverter::ros_pc.boost::shared_ptr<T>::operator*<pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > > >()’ (type ‘pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > >’) to type ‘sensor_msgs::PointCloud2& {aka sensor_msgs::PointCloud2_<std::allocator<void> >&}’
+     pcl::toROSMsg(*kinect_color_pc, *ros_pc);
+                                            ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:119:21: error: no match for ‘operator=’ (operand types are ‘mrsd_ros_tutorials::SaveDataResponse_<std::allocator<void> >::_point_cloud_type {aka sensor_msgs::PointCloud2_<std::allocator<void> >}’ and ‘pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > >’)
+     res.point_cloud = *ros_pc;
+                     ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:119:21: note: candidates are:
+In file included from /opt/ros/indigo/include/pcl_conversions/pcl_conversions.h:56:0,
+                 from /home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/subscribe_pc_node.cpp:13:
+/opt/ros/indigo/include/sensor_msgs/PointCloud2.h:24:8: note: sensor_msgs::PointCloud2_<std::allocator<void> >& sensor_msgs::PointCloud2_<std::allocator<void> >::operator=(const sensor_msgs::PointCloud2_<std::allocator<void> >&)
+ struct PointCloud2_
+        ^
+/opt/ros/indigo/include/sensor_msgs/PointCloud2.h:24:8: note:   no known conversion for argument 1 from ‘pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > >’ to ‘const sensor_msgs::PointCloud2_<std::allocator<void> >&’
+/opt/ros/indigo/include/sensor_msgs/PointCloud2.h:24:8: note: sensor_msgs::PointCloud2_<std::allocator<void> >& sensor_msgs::PointCloud2_<std::allocator<void> >::operator=(sensor_msgs::PointCloud2_<std::allocator<void> >&&)
+/opt/ros/indigo/include/sensor_msgs/PointCloud2.h:24:8: note:   no known conversion for argument 1 from ‘pcl::PointCloud<sensor_msgs::PointCloud2_<std::allocator<void> > >’ to ‘sensor_msgs::PointCloud2_<std::allocator<void> >&&’
+make[2]: *** [CMakeFiles/subscribe_pc_node.dir/src/subscribe_pc_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/subscribe_pc_node.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘void segment_bin(const Ptr&)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:42:23: error: ‘input_pc’ was not declared in this scope
+   pass.setInputCloud (input_pc);
+                       ^
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp: In function ‘int main(int, char**)’:
+/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/src/perception_data.cpp:71:9: error: ‘kinect_color_pc’ was not declared in this scope
+         kinect_color_pc = srv.response.point_cloud;
+         ^
+make[2]: *** [CMakeFiles/perception_data.dir/src/perception_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/perception_data.dir/all] Error 2
+make: *** [all] Error 2

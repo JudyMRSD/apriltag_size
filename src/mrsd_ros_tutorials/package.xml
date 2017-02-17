@@ -37,7 +37,6 @@
 <!---for point cloud pointer -->
   <build_depend>sensor_msgs</build_depend>
   <run_depend>sensor_msgs</run_depend>
-<!---for point cloud transform -->
   <build_depend>pcl_ros</build_depend>
   <run_depend>pcl_ros</run_depend>
 

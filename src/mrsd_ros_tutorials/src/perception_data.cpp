@@ -194,33 +194,37 @@ int main(int argc, char **argv)
   xyz_pc_ptr = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>);
   std::cout << "4"<< std::endl;
   //save image when button is pressed
-  if(item_number!=0){
+  while (ros::ok())
+  {
+    if(item_number!=0){
 
-        // take item number as file name, and convert sensor_msgs to pcl point cloud 
-        srv.request.item_number = item_number; 
-        std::cout << "5"<< std::endl;
-        bool res = client.call(srv);
-        std::cout << "6"<< std::endl;
+          // take item number as file name, and convert sensor_msgs to pcl point cloud 
+          srv.request.item_number = item_number; 
+          std::cout << "5"<< std::endl;
+          bool res = client.call(srv);
+          bool res_2 = client.call(transform_srv);
+          std::cout << "6"<< std::endl;
 
-        ros_msg_pc = srv.response.point_cloud;
-        std::cout << "7"<< std::endl;
-        transformed_pc = srv.response.point_cloud;
-        std::cout << "8"<< std::endl;
-        pcl::fromROSMsg(ros_msg_pc, *xyz_pc_ptr);
-        std::cout << "9"<< std::endl;
-       
-        //segment pcd and save, for debug purpose 
-        segment_bin(xyz_pc_ptr);
-        std::cout << "10"<< std::endl;
-        save_pcd("segmented", xyz_pc_ptr);
-        std::cout << "11"<< std::endl;
+          ros_msg_pc = srv.response.point_cloud;
+          std::cout << "7"<< std::endl;
+          transformed_pc = srv.response.point_cloud;
+          std::cout << "8"<< std::endl;
+          pcl::fromROSMsg(ros_msg_pc, *xyz_pc_ptr);
+          std::cout << "9"<< std::endl;
+         
+          //segment pcd and save, for debug purpose 
+          segment_bin(xyz_pc_ptr);
+          std::cout << "10"<< std::endl;
+          save_pcd("segmented", xyz_pc_ptr);
+          std::cout << "11"<< std::endl;
 
-        //error (xyz_pc_ptr, cad_pc_ptr);
-        std::string file_path = "/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/model/bin_21.pcd";
-        load_pcd(file_path);
-        std::cout << "12"<< std::endl;
+          //error (xyz_pc_ptr, cad_pc_ptr);
+          std::string file_path = "/home/jin/ros/apriltag_size/src/mrsd_ros_tutorials/model/bin_21.pcd";
+          load_pcd(file_path);
+          std::cout << "12"<< std::endl;
 
-        ros::Duration(1.0).sleep();
+          ros::Duration(1.0).sleep();
       }
+  }
   
 }

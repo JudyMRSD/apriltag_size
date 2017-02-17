@@ -1,5 +1,3 @@
-//node for testing purpose
-//not useful
 #include <pcl/point_cloud.h>
 #include <pcl/kdtree/kdtree_flann.h>
 

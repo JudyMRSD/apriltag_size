@@ -57,6 +57,10 @@
 */
 class ImageConverter
 {
+  
+
+
+public:
   ros::NodeHandle nh;
   image_transport::ImageTransport it_;
 //subscriber to rgb img and point cloud
@@ -87,7 +91,8 @@ class ImageConverter
   //listen to the transform broadcasted using apriltag
   const tf::TransformListener tf_listener;
   tf::StampedTransform tf_apriltag;
-public:
+
+  ros::Publisher transformed_pub;
 
   ImageConverter()
     : it_(nh)
@@ -95,10 +100,14 @@ public:
     
     kinect_img_sub = it_.subscribe("/kinect2/hd/image_color", 1, &ImageConverter::imageCb, this);
     kinect_pc_sub =  nh.subscribe("/kinect2/hd/points", 1, &ImageConverter::kinectPointCloudCB, this);
+    //point to newobject, otherwise get null
     kinect_color_pc = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
     //apriltag_sub = nh.subscribe("/apriltags/detections", 1, &ImageConverter::apriltagCB, this);
     kinect_apriltag_sr = nh.advertiseService("ImageConverter", &ImageConverter::transformCB, this);
     service = nh.advertiseService("ImageConverter", &ImageConverter::saveDataCB, this);
+    //publish transformed point cloud for debugging 
+    transformed_pub = nh.advertise<sensor_msgs::PointCloud2>("transfomred", 1000);
+
 
   }
 
@@ -146,6 +155,9 @@ public:
     mrsd_ros_tutorials::SaveData::Response &res )
 
   {
+
+    //question: why need new
+    //question:: why cannot declare this in Class?
 
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_transformed (new pcl::PointCloud<pcl::PointXYZRGB>);
     //static tf::TransformBroadcaster br1;
@@ -245,6 +257,8 @@ int main(int argc, char** argv)
  
   while(ros::ok())
     {
+        ic.transformed_pub.publish(ic.tr_ros_pc);
+
         ros::Duration(1).sleep();
         ros::spinOnce();
    //     ic.saveDataCB("1");

@@ -72,6 +72,10 @@ target_link_libraries(subscribe_pc_node ${catkin_LIBRARIES})
 add_executable(perception_data src/perception_data.cpp)
 target_link_libraries(perception_data ${catkin_LIBRARIES})
 
+add_executable(subscribe_depth_node src/subscribe_depth_node.cpp)
+target_link_libraries(subscribe_depth_node ${catkin_LIBRARIES})
+
+
 
 
 

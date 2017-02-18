@@ -77,9 +77,9 @@ public:
   {
 /*
     SaveData.srv:
-    string item_number
-    ---
-    uint64 status
+    uint16 item_number
+---
+uint64 status
     */  
 
 //file name 
@@ -88,13 +88,16 @@ public:
 //save images
 
     std::string name;
-    name = req.item_number;
-    name = "hard"+ name + ".jpg";
+    name = std::to_string(req.item_number);
+    std::string pc_name;
+    pc_name = name;
+
+    name = "tote"+ name + ".jpg";
     cv::imwrite(name, kinect_color_raw->image);
     ROS_INFO("[Perception] Save image file ");
 
-    std::string pc_name;
-    pc_name = "hard_pc"+ pc_name +".pcd";
+
+    pc_name = "tote_pc"+ pc_name +".pcd";
     writer.writeBinary(pc_name, *kinect_color_pc);
     ROS_INFO("[Perception] Save PCD file ");
 
@@ -112,7 +115,7 @@ int main(int argc, char** argv)
  
   while(ros::ok())
     {
-        ros::Duration(10).sleep();
+        ros::Duration(1).sleep();
         ros::spinOnce();
    //     ic.saveDataCB("1");
     }

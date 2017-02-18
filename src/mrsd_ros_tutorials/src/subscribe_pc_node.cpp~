@@ -16,6 +16,10 @@
 #include <opencv2/opencv.hpp>
 #include <cv_bridge/cv_bridge.h>
 
+//service 
+#include "mrsd_ros_tutorials/SaveData.h"
+
+
 /** @brief Handles image pub/sub and painting circles (demo of a in-source class)
 */
 class ImageConverter
@@ -34,8 +38,9 @@ class ImageConverter
 //PCD writer
   pcl::PCDWriter writer;
 
+//the service is created and advertised over ROS
+  ros::ServiceServer service;
 public:
-  int i = 0;
 
   ImageConverter()
     : it_(nh)
@@ -44,6 +49,7 @@ public:
     kinect_img_sub = it_.subscribe("/kinect2/hd/image_color", 1, &ImageConverter::imageCb, this);
     kinect_pc_sub =  nh.subscribe("/kinect2/hd/points", 1, &ImageConverter::kinectPointCloudCB, this);
     kinect_color_pc = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
+    service = nh.advertiseService("ImageConverter", &ImageConverter::saveDataCB, this);
   }
 
   ~ImageConverter()
@@ -65,20 +71,38 @@ public:
 
 
      
-  //void saveImageAndPCD(cv_bridge::CvImagePtr kinect_color_raw)
-  void saveImageAndPCD(std::string name)
+  //void saveDataCB(cv_bridge::CvImagePtr kinect_color_raw)
+  bool saveDataCB(mrsd_ros_tutorials::SaveData::Request &req, 
+    mrsd_ros_tutorials::SaveData::Response &res )
   {
+/*
+    SaveData.srv:
+    uint16 item_number
+---
+uint64 status
+    */  
 
+//file name 
+    std::cout << "Save Data request recieved: \n"<< 
+           "item_number: "<< req.item_number <<std::endl;
 //save images
-    
-    name = "hard"+ name + ".jpg";
+
+    std::string name;
+    name = std::to_string(req.item_number);
+    std::string pc_name;
+    pc_name = name;
+
+    name = "tote"+ name + ".jpg";
     cv::imwrite(name, kinect_color_raw->image);
     ROS_INFO("[Perception] Save image file ");
 
-    std::string pc_name;
-    pc_name = "hard_pc"+ pc_name +".pcd";
+
+    pc_name = "tote_pc"+ pc_name +".pcd";
     writer.writeBinary(pc_name, *kinect_color_pc);
     ROS_INFO("[Perception] Save PCD file ");
+
+    res.status = 1;
+    return true;
 
   }
 };
@@ -91,9 +115,9 @@ int main(int argc, char** argv)
  
   while(ros::ok())
     {
-        ros::Duration(10).sleep();
+        ros::Duration(1).sleep();
         ros::spinOnce();
-        ic.saveImageAndPCD("1");
+   //     ic.saveDataCB("1");
     }
     
   

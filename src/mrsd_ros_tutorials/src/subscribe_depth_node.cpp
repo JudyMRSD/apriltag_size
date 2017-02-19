@@ -48,7 +48,7 @@ public:
     : it_(nh)
   {
     
-    kinect_img_sub = it_.subscribe("/kinect2/hd/image_color", 1, &ImageConverter::imageCb, this);
+    kinect_img_sub = it_.subscribe("/kinect2/hd/image_color_rect", 1, &ImageConverter::imageCb, this);
     kinect_depth_sub = it_.subscribe("/kinect2/hd/image_depth_rect", 1, &ImageConverter::depthCb, this);
     kinect_pc_sub =  nh.subscribe("/kinect2/hd/points", 1, &ImageConverter::kinectPointCloudCB, this);
     kinect_color_pc = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
@@ -69,7 +69,9 @@ public:
 
   void depthCb(const sensor_msgs::ImageConstPtr& msg )
   {
-     kinect_depth_raw = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::TYPE_16UC1);
+     kinect_depth_raw = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::TYPE_32FC1);
+     //std::cout << typeid(kinect_depth_raw).name() << '\n';
+     //kinect_depth_raw = kinect_depth_raw / 4500.0f * 255.0f;
      ROS_INFO("[Perception] Get Kinect Depth Data ");
 
   }
@@ -115,8 +117,18 @@ uint64 status
     writer.writeBinary(pc_name, *kinect_color_pc);
     ROS_INFO("[Perception] Save PCD file ");
     std::cout << "depth1"<<std::endl;
+
     depth_name = "tote_depth"+ depth_name + ".jpg";
-    cv::imwrite(name, kinect_depth_raw->image);
+    cv::Mat gray_depth;
+    //kinect_depth_raw->image.convertTo( gray, CV_8U, 255 ); 
+    double minVal, maxVal;
+    
+    cv::minMaxLoc(kinect_depth_raw->image, &minVal, &maxVal);
+    //32F image needs to be converted to 8U type    
+    //http://docs.opencv.org/2.4/doc/user_guide/ug_mat.html
+    kinect_depth_raw->image.convertTo(gray_depth, CV_8U, 255.0/(maxVal - minVal), -minVal * 255.0/(maxVal - minVal));
+    cv::imwrite(depth_name, gray_depth);
+    //cv::imwrite(depth_name, kinect_depth_raw->image);
     std::cout << "depth2"<<std::endl;
     ROS_INFO("[Perception] Save image file ");
 

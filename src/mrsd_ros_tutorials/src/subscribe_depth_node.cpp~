@@ -48,9 +48,9 @@ public:
     : it_(nh)
   {
     
-    kinect_img_sub = it_.subscribe("/kinect2/hd/image_color_rect", 1, &ImageConverter::imageCb, this);
-    kinect_depth_sub = it_.subscribe("/kinect2/hd/image_depth_rect", 1, &ImageConverter::depthCb, this);
-    kinect_pc_sub =  nh.subscribe("/kinect2/hd/points", 1, &ImageConverter::kinectPointCloudCB, this);
+    kinect_img_sub = it_.subscribe("/camera/rgb/image_raw", 1, &ImageConverter::imageCb, this);
+    kinect_depth_sub = it_.subscribe("/camera/depth/image_raw", 1, &ImageConverter::depthCb, this);
+    kinect_pc_sub =  nh.subscribe("/camera/depth_registered/points", 1, &ImageConverter::kinectPointCloudCB, this);
     kinect_color_pc = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
     service = nh.advertiseService("ImageConverter", &ImageConverter::saveDataCB, this);
   }
@@ -63,7 +63,7 @@ public:
   void imageCb(const sensor_msgs::ImageConstPtr& msg )
   {
      kinect_color_raw = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
-     ROS_INFO("[Perception] Get Kinect Image Data ");
+     ROS_INFO("[Perception] Get Asus Image Data ");
 
   }
 
@@ -72,13 +72,13 @@ public:
      kinect_depth_raw = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::TYPE_32FC1);
      //std::cout << typeid(kinect_depth_raw).name() << '\n';
      //kinect_depth_raw = kinect_depth_raw / 4500.0f * 255.0f;
-     ROS_INFO("[Perception] Get Kinect Depth Data ");
+     ROS_INFO("[Perception] Get Asus Depth Data ");
 
   }
 
   void kinectPointCloudCB(const sensor_msgs::PointCloud2ConstPtr& cloud_msg){
      pcl::fromROSMsg(*cloud_msg, *kinect_color_pc);
-     ROS_INFO("[Perception] Get Kinect Point Cloud Data");
+     ROS_INFO("[Perception] Get Asus Point Cloud Data");
   }
 
 
@@ -119,9 +119,10 @@ uint64 status
     std::cout << "depth1"<<std::endl;
 
     depth_name = "tote_depth"+ depth_name + ".jpg";
-    //cv::Mat gray;
+    cv::Mat gray_depth;
     //kinect_depth_raw->image.convertTo( gray, CV_8U, 255 ); 
     double minVal, maxVal;
+    
     cv::minMaxLoc(kinect_depth_raw->image, &minVal, &maxVal);
     //32F image needs to be converted to 8U type    
     //http://docs.opencv.org/2.4/doc/user_guide/ug_mat.html

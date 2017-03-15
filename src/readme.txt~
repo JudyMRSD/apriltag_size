@@ -1,0 +1,4 @@
+save_image:
+rosrun mrsd_ros_tutorials subscribe_depth_node
+rosrun mrsd_ros_tutorials perception_data 
+

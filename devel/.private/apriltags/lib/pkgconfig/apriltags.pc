@@ -1,0 +1,8 @@
+prefix=/home/harp/SaveData/Jin/apriltag_size/devel/.private/apriltags
+
+Name: apriltags
+Description: Description of apriltags
+Version: 0.0.2
+Cflags: -I/home/harp/SaveData/Jin/apriltag_size/devel/.private/apriltags/include -I/home/harp/SaveData/Jin/apriltag_size/src/apriltags/include
+Libs: -L/home/harp/SaveData/Jin/apriltag_size/devel/.private/apriltags/lib 
+Requires: cv_bridge std_msgs sensor_msgs image_transport roscpp geometry_msgs

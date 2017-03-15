@@ -1,0 +1,8 @@
+prefix=/home/harp/SaveData/Jin/apriltag_size/install
+
+Name: urdf_tutorial
+Description: Description of urdf_tutorial
+Version: 0.2.4
+Cflags: 
+Libs: -L/home/harp/SaveData/Jin/apriltag_size/install/lib 
+Requires: 

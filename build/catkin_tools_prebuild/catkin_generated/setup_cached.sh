@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+# generated from catkin/python/catkin/environment_cache.py
+
+# based on a snapshot of the environment before and after calling the setup script
+# it emulates the modifications of the setup script without recurring computations
+
+# new environment variables
+
+# modified environment variables
+export CMAKE_PREFIX_PATH="/home/harp/SaveData/Jin/apriltag_size/devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/opt/ros/indigo/lib:/home/harp/torch/install/lib:/home/harp/torch/install/lib:/usr/local/cuda-7.5/targets/x86_64-linux/lib:/home/harp/torch/install/lib:/home/harp/torch/install/lib"
+export PATH="/opt/ros/indigo/bin:/home/harp/torch/install/bin:/home/harp/torch/install/bin:/home/harp/torch/install/bin:/home/harp/torch/install/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PWD="/home/harp/SaveData/Jin/apriltag_size/build/catkin_tools_prebuild"
+export PYTHONPATH="/opt/ros/indigo/lib/python2.7/dist-packages:/usr/lib/python2.7/dist-packages"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/harp/SaveData/Jin/apriltag_size/devel/.private/catkin_tools_prebuild/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/harp/SaveData/Jin/apriltag_size/build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"

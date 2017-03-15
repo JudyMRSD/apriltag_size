@@ -1,0 +1,6 @@
+/home/harp/SaveData/Jin/apriltag_size/build/apriltagscpp/src/CMakeFiles/apriltagscpp.dir
+/home/harp/SaveData/Jin/apriltag_size/build/apriltagscpp/src/CMakeFiles/camtest.dir
+/home/harp/SaveData/Jin/apriltag_size/build/apriltagscpp/src/CMakeFiles/gltest.dir
+/home/harp/SaveData/Jin/apriltag_size/build/apriltagscpp/src/CMakeFiles/maketags.dir
+/home/harp/SaveData/Jin/apriltag_size/build/apriltagscpp/src/CMakeFiles/quadtest.dir
+/home/harp/SaveData/Jin/apriltag_size/build/apriltagscpp/src/CMakeFiles/tagtest.dir

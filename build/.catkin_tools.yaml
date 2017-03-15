@@ -1,0 +1,6 @@
+devel_space: /home/harp/SaveData/Jin/apriltag_size/devel
+install: false
+install_space: /home/harp/SaveData/Jin/apriltag_size/install
+profile: default
+source_space: /home/harp/SaveData/Jin/apriltag_size/src
+workspace: /home/harp/SaveData/Jin/apriltag_size

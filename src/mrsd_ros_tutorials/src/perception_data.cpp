@@ -25,22 +25,21 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::ServiceClient client = n.serviceClient<mrsd_ros_tutorials::SaveData>("ImageConverter");
   mrsd_ros_tutorials::SaveData srv;
-  int item_number;
-  std::cin>>item_number;
+  std::string item_name;
+  std::cin>>item_name;
   
-  srv.request.item_number = item_number;
-  std::cout << "("<< srv.request.item_number<< ")\n";
+  
 
   while (ros::ok())
   {
-   std::cin>>item_number; 
+   std::cin>>item_name; 
   //save image when button is pressed
-  if(item_number!=0){
+  if(item_name.length()>0){
         
-        srv.request.item_number = item_number; // todo
+        srv.request.item_name = item_name; // todo
         
         bool res = client.call(srv);
-	item_number = 0;
+	      item_name = "";
 
         ros::Duration(1.0).sleep();
       }

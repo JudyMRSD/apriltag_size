@@ -89,18 +89,18 @@ public:
   {
 /*
     SaveData.srv:
-    uint16 item_number
+    string item_name
 ---
 uint64 status
     */  
 
 //file name 
     std::cout << "Save Data request recieved: \n"<< 
-           "item_number: "<< req.item_number <<std::endl;
+           "item_name: "<< req.item_name <<std::endl;
 //save images
 
     std::string name;
-    name = std::to_string(req.item_number);
+    name = req.item_name;
     std::string pc_name;
     pc_name = name;
     std::string depth_name;
@@ -111,6 +111,7 @@ uint64 status
     cv::imwrite(name, kinect_color_raw->image);
     ROS_INFO("[Perception] Save image file ");
     std::cout << "COLOR2"<<std::endl;
+    std::cout << name<<std::endl;
 
 
     pc_name = "tote_pc"+ pc_name +".pcd";
@@ -128,6 +129,7 @@ uint64 status
     //http://docs.opencv.org/2.4/doc/user_guide/ug_mat.html
     kinect_depth_raw->image.convertTo(gray_depth, CV_8U, 255.0/(maxVal - minVal), -minVal * 255.0/(maxVal - minVal));
     cv::imwrite(depth_name, gray_depth);
+
     //cv::imwrite(depth_name, kinect_depth_raw->image);
     std::cout << "depth2"<<std::endl;
     ROS_INFO("[Perception] Save image file ");

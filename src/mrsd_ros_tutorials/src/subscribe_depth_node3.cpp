@@ -1,4 +1,4 @@
-//used rectified images
+
 
 #include <ros/ros.h>
 #include <image_transport/image_transport.h>
@@ -48,8 +48,8 @@ public:
     : it_(nh)
   {
     
-    kinect_img_sub = it_.subscribe("/camera/rgb/image_rect_color", 1, &ImageConverter::imageCb, this);
-    kinect_depth_sub = it_.subscribe("/camera/depth/image_rect_raw", 1, &ImageConverter::depthCb, this);
+    kinect_img_sub = it_.subscribe("/camera/rgb/image_raw", 1, &ImageConverter::imageCb, this);
+    kinect_depth_sub = it_.subscribe("/camera/depth/image_raw", 1, &ImageConverter::depthCb, this);
     kinect_pc_sub =  nh.subscribe("/camera/depth_registered/points", 1, &ImageConverter::kinectPointCloudCB, this);
     kinect_color_pc = pcl::PointCloud<pcl::PointXYZRGB>::Ptr(new pcl::PointCloud<pcl::PointXYZRGB>);
     service = nh.advertiseService("ImageConverter", &ImageConverter::saveDataCB, this);

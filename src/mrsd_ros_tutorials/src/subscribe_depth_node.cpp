@@ -114,10 +114,10 @@ uint64 status
     std::cout << name<<std::endl;
 
 
-    pc_name = "tote_pc"+ pc_name +".pcd";
-    writer.writeBinary(pc_name, *kinect_color_pc);
-    ROS_INFO("[Perception] Save PCD file ");
-    std::cout << "depth1"<<std::endl;
+    //pc_name = "tote_pc"+ pc_name +".pcd";
+    //writer.writeBinary(pc_name, *kinect_color_pc);
+    //ROS_INFO("[Perception] Save PCD file ");
+    //std::cout << "depth1"<<std::endl;
 
     depth_name = "tote_depth"+ depth_name + ".jpg";
     cv::Mat gray_depth;

@@ -26,7 +26,7 @@ int main(int argc, char **argv)
   ros::ServiceClient client = n.serviceClient<mrsd_ros_tutorials::SaveData>("ImageConverter");
   mrsd_ros_tutorials::SaveData srv;
   std::string item_name;
-  std::cin>>item_name;
+  std::cout << "Please enter image name"<<std::endl;
   
   
 

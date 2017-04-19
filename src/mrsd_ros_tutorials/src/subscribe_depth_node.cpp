@@ -103,12 +103,13 @@ uint64 status
     name = req.item_name;
     std::string pc_name;
     pc_name = name;
+    std::string rgb_name;
     std::string depth_name;
-    depth_name = name;
+   
 
     std::cout << "COLOR"<<std::endl;
-    name = "tote"+ name + ".jpg";
-    cv::imwrite(name, kinect_color_raw->image);
+    rgb_name = name + ".jpg";
+    cv::imwrite(rgb_name, kinect_color_raw->image);
     ROS_INFO("[Perception] Save image file ");
     std::cout << "COLOR2"<<std::endl;
     std::cout << name<<std::endl;
@@ -119,7 +120,7 @@ uint64 status
     //ROS_INFO("[Perception] Save PCD file ");
     //std::cout << "depth1"<<std::endl;
 
-    depth_name = "tote_depth"+ depth_name + ".jpg";
+    depth_name = name + "_depth.jpg";
     cv::Mat gray_depth;
     //kinect_depth_raw->image.convertTo( gray, CV_8U, 255 ); 
     double minVal, maxVal;
